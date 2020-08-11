@@ -1,0 +1,638 @@
+fileFormatVersion: 2
+guid: cbe87c85c6918ba4e83c45b900af1db9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6063150137342342913
+    second: scheddelton_aseprite-Sheet-Sheet_0
+  - first:
+      213: -1902004211651712665
+    second: scheddelton_aseprite-Sheet-Sheet_1
+  - first:
+      213: 2156412718801283818
+    second: scheddelton_aseprite-Sheet-Sheet_2
+  - first:
+      213: -7911607967381156427
+    second: scheddelton_aseprite-Sheet-Sheet_3
+  - first:
+      213: 8594501723190330350
+    second: scheddelton_aseprite-Sheet-Sheet_4
+  - first:
+      213: 2604262324108667469
+    second: scheddelton_aseprite-Sheet-Sheet_5
+  - first:
+      213: 5627378107380210945
+    second: scheddelton_aseprite-Sheet-Sheet_6
+  - first:
+      213: 4814343807031594225
+    second: scheddelton_aseprite-Sheet-Sheet_7
+  - first:
+      213: 6763716282826679515
+    second: scheddelton_aseprite-Sheet-Sheet_8
+  - first:
+      213: 1971918365552884924
+    second: scheddelton_aseprite-Sheet-Sheet_9
+  - first:
+      213: -3445341743393878258
+    second: scheddelton_aseprite-Sheet-Sheet_10
+  - first:
+      213: -3190240741877666867
+    second: scheddelton_aseprite-Sheet-Sheet_11
+  - first:
+      213: -4028002903909076273
+    second: scheddelton_aseprite-Sheet-Sheet_12
+  - first:
+      213: -492214090735806272
+    second: scheddelton_aseprite-Sheet-Sheet_13
+  - first:
+      213: 4412514278391024129
+    second: scheddelton_aseprite-Sheet-Sheet_0
+  - first:
+      213: -4966033929707087689
+    second: scheddelton_aseprite-Sheet-Sheet_1
+  - first:
+      213: -1820497196327649711
+    second: scheddelton_aseprite-Sheet-Sheet_2
+  - first:
+      213: -3334180543054452132
+    second: scheddelton_aseprite-Sheet-Sheet_3
+  - first:
+      213: -1094366279744290943
+    second: scheddelton_aseprite-Sheet-Sheet_4
+  - first:
+      213: -4118063155295397440
+    second: scheddelton_aseprite-Sheet-Sheet_5
+  - first:
+      213: -3121077518628741924
+    second: scheddelton_aseprite-Sheet-Sheet_6
+  - first:
+      213: -9097066402334321794
+    second: scheddelton_aseprite-Sheet-Sheet_7
+  - first:
+      213: 8173374132352173598
+    second: scheddelton_aseprite-Sheet-Sheet_8
+  - first:
+      213: 3971331168956607748
+    second: scheddelton_aseprite-Sheet-Sheet_9
+  - first:
+      213: 4688543300766841533
+    second: scheddelton_aseprite-Sheet-Sheet_10
+  - first:
+      213: 9188336019400081771
+    second: scheddelton_aseprite-Sheet-Sheet_11
+  - first:
+      213: -6711954285663459490
+    second: scheddelton_aseprite-Sheet-Sheet_12
+  - first:
+      213: -2331509961387348430
+    second: scheddelton_aseprite-Sheet-Sheet_13
+  - first:
+      213: 5993307412305420391
+    second: scheddelton_aseprite-Sheet-Sheet_14
+  - first:
+      213: -4174125922348238977
+    second: scheddelton_aseprite-Sheet-Sheet_15
+  - first:
+      213: 1459916962650728595
+    second: scheddelton_aseprite-Sheet-Sheet_16
+  - first:
+      213: -912503963109048126
+    second: scheddelton_aseprite-Sheet-Sheet_17
+  - first:
+      213: 6899373839402558904
+    second: scheddelton_aseprite-Sheet-Sheet_18
+  - first:
+      213: -3507380423957099157
+    second: scheddelton_aseprite-Sheet-Sheet_19
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10a06d19b566c3d30800000000000000
+      internalID: 4412514278391024129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b8954db37a151bb0800000000000000
+      internalID: -4966033929707087689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15ebb42027b4cb6e0800000000000000
+      internalID: -1820497196327649711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5a683a167c9ab1d0800000000000000
+      internalID: -3334180543054452132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18ffca1baa700d0f0800000000000000
+      internalID: -1094366279744290943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c95ef1f063b9d6c0800000000000000
+      internalID: -4118063155295397440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdc1da17884bfa4d0800000000000000
+      internalID: -3121077518628741924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e73d8be2e4ab0c180800000000000000
+      internalID: -9097066402334321794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e16c73f0878ad6170800000000000000
+      internalID: 8173374132352173598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40d681b38a00d1730800000000000000
+      internalID: 3971331168956607748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbabe348a4d011140800000000000000
+      internalID: 4688543300766841533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b61c4418de6838f70800000000000000
+      internalID: 9188336019400081771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e576e5e73295ad2a0800000000000000
+      internalID: -6711954285663459490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23ee8310b00d4afd0800000000000000
+      internalID: -2331509961387348430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7602e2c66518c2350800000000000000
+      internalID: 5993307412305420391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f77feaec6968216c0800000000000000
+      internalID: -4174125922348238977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3982d581ebaa24410800000000000000
+      internalID: 1459916962650728595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c0cfbeea722653f0800000000000000
+      internalID: -912503963109048126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b56636d3ff7fbf50800000000000000
+      internalID: 6899373839402558904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6dc0e95618435fc0800000000000000
+      internalID: -3507380423957099157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
