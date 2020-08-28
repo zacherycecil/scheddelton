@@ -1,24 +1,36 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class ButtonBehaviour : MonoBehaviour
 {
-    public BattleSystem bs;
+    public BattleSystem battleSystem;
+    public MenuSystem menuSystem;
+    public Stamina stamina;
+    public DialogSystem dialog;
 
-    public void OpenAttackMenu()
+    public void GoToWeaponsMenu()
     {
-        bs.OpenAttackMenu();
+         menuSystem.GoToWeaponsMenu();
     }
 
-    public void DoAttack()
+    public void GoToAttackMenu()
     {
-        bs.PunchAttack();
-        bs.ResetMenu();
+        menuSystem.GoToAttackMenu();
     }
 
     public void GoBack()
     {
-        bs.ResetMenu();
+        if(battleSystem.state == BattleState.NOT_IN_BATTLE)
+
+            menuSystem.GoToOverworldMenu();
+        else
+            menuSystem.GoToMainBattleMenu();
+    }
+
+    public void FinishTurn()
+    {
+        battleSystem.state = BattleState.ENEMY_TURN;
     }
 }

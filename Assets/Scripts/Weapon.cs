@@ -6,23 +6,12 @@ using UnityEngine;
 public class Weapon : MonoBehaviour
 {
     public String weaponName;
+    public List<Attack> attackList;
+    public Sprite weaponSprite;
+    public float switchCost;
 
-    LinkedList<Attack> attackList = new LinkedList<Attack>();
-
-    public void AddAttack(Attack atk)
+    public Sprite GetSprite()
     {
-        attackList.add(atk);
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        return weaponSprite;
     }
 }

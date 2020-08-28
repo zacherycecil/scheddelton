@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="1.4.1" orientation="orthogonal" renderorder="right-down" width="50" height="50" tilewidth="32" tileheight="32" infinite="0" nextlayerid="5" nextobjectid="5">
+ <tileset firstgid="1" source="brick-wall-pe.tsx"/>
+ <tileset firstgid="49" source="brick-floor.tsx"/>
+ <tileset firstgid="50" source="floor-shadow.tsx"/>
+ <layer id="2" name="Floor" width="50" height="50">
+  <data encoding="base64" compression="zstd">
+   KLUv/WAQJrUAABgAADEFAKkNPTS/ND9EAAXYnfdIASw=
+  </data>
+ </layer>
+ <layer id="3" name="Shadow" width="50" height="50">
+  <data encoding="base64" compression="zstd">
+   KLUv/WAQJtUBAHgAADMAAAA0NQAyADY2ADMOgBCta60NeklmzJUWoNglvQAV6NMuF/UUp0djfeGoZwSyBaiQXeSRAi0=
+  </data>
+ </layer>
+ <layer id="1" name="Walls" width="50" height="50">
+  <data encoding="base64" compression="zstd">
+   KLUv/WAQJmUDAPgAAAAAAQAAAAIDAAkACwABBQQMGgAAABsAERIUERMAHaAwtWkNsIITkeDkAT+OvY9YIlaB2pHT9krq0/dh2+x4DR2pR6KQ1Nus2HJQXD4xRvTOcuqN0f19zNqJwpGRo0soT1D7TE6QamyuFA==
+  </data>
+ </layer>
+</map>
