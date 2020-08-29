@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3562264762796620608}
   - component: {fileID: 3562264762796620620}
   - component: {fileID: 3562264762796620623}
+  - component: {fileID: 4597923494978611415}
   - component: {fileID: 3562264762796620621}
   m_Layer: 0
   m_Name: Scheddelton
@@ -151,6 +152,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.19467068, y: 0.17771626}
   m_EdgeRadius: 0
+--- !u!114 &4597923494978611415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3562264762796620611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f3a8cbeeac7266409fe01b86756b5b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &3562264762796620621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,4 +176,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40934f25cb09e7145a5092c098cc3958, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bs: {fileID: 0}
   speed: 1
+  inBattle: 0

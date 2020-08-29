@@ -9,6 +9,7 @@ public class BattleHUD : MonoBehaviour
     public Slider healthSlider;
     public TextMeshProUGUI characterName;
     public Character character;
+    public GameObject currentWeaponIcon;
 
     public void SetCharacter(Character character)
     {
@@ -21,6 +22,11 @@ public class BattleHUD : MonoBehaviour
         healthSlider.maxValue = character.maxHealth;
         healthSlider.value = character.currentHealth;
         characterName.text = character.characterName;
+    }
+
+    public void SetWeaponIcon(Sprite weaponSprite)
+    {
+        currentWeaponIcon.GetComponent<Image>().sprite = weaponSprite;
     }
 
     // Start is called before the first frame update

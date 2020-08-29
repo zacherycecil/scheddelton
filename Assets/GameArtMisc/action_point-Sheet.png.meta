@@ -11,6 +11,24 @@ TextureImporter:
   - first:
       213: -1451724663127040417
     second: action_point-Sheet_2
+  - first:
+      213: -6716768451072448475
+    second: action_point-Sheet_0
+  - first:
+      213: -6521900177516357486
+    second: action_point-Sheet_1
+  - first:
+      213: 2521668748776159477
+    second: action_point-Sheet_2
+  - first:
+      213: 7961797097614797956
+    second: action_point-Sheet_3
+  - first:
+      213: -1892237607152554691
+    second: action_point-Sheet_3
+  - first:
+      213: -3233106241910260250
+    second: action_point-Sheet_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -122,8 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b419988b7cb8189c0800000000000000
-      internalID: -3926703710179585717
+      spriteID: 528a6434eae39c2a0800000000000000
+      internalID: -6716768451072448475
       vertices: []
       indices: 
       edges: []
@@ -143,8 +161,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fa7b9de35fb0f2fc0800000000000000
-      internalID: -3517579636003719249
+      spriteID: 2989492d75e8d75a0800000000000000
+      internalID: -6521900177516357486
       vertices: []
       indices: 
       edges: []
@@ -164,8 +182,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5e93a64c107adbe0800000000000000
-      internalID: -1451724663127040417
+      spriteID: 5f8b10cdd54cef220800000000000000
+      internalID: 2521668748776159477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: action_point-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 0
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3d690bfbeb6db5e0800000000000000
+      internalID: -1892237607152554691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: action_point-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ed37d1b003b123d0800000000000000
+      internalID: -3233106241910260250
       vertices: []
       indices: 
       edges: []

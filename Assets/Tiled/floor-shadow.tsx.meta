@@ -1,0 +1,26 @@
+fileFormatVersion: 2
+guid: 68aa7f822a842a2459b06ab9b6f8c0d9
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: cc34d0f3dc257a442819830b408c5322, type: 3}
+  missingFiles: []
+  errors:
+  - Mismatching width/height detected. Tileset = (32, 32), image = (96, 32). This
+    may happen when a tileset image has been resized. Open map and tileset in Tiled
+    Map Editor and resave.
+  warnings: []
+  missingSortingLayers: []
+  missingLayers: []
+  missingTags: []
+  importerVersion: 10
+  pixelsPerUnit: 100
+  edgesPerEllipse: 32
+  numberOfObjectsImported: 2
+  useSpriteAtlas: 1
+  atlasWidth: 2048
+  atlasHeight: 2048
