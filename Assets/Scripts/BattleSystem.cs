@@ -196,7 +196,7 @@ public class BattleSystem : MonoBehaviour
             damage = damage * (1 + (player.elementalControlLevel * 0.50f));
         if (attack.physical)
             damage = damage * (1 + (player.physicalStrengthLevel * 0.50f));
-
+        player.AttackAnimation(attack.attackName.ToLower());
         dialog.DisplayDialog(attackDialog + attack.attackName + " deals " + (int)damage + " damage to " + player.characterName + ".");
         enemy.currentHealth = enemy.currentHealth - (int)damage;
         dialog.ResetDialogString();
