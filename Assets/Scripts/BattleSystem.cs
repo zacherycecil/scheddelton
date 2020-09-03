@@ -13,8 +13,6 @@ public class BattleSystem : MonoBehaviour
     public MenuSystem menuSystem;
 
     // DIALOG BOX
-    public GameObject dialogBox;
-    public TextMeshProUGUI dialogText;
     public bool delaying;
     public DialogSystem dialog;
 
@@ -26,12 +24,7 @@ public class BattleSystem : MonoBehaviour
     public GameObject fightText;
     public AudioSource gong;
     public AudioSource punch;
-    public float weaponSwitchCost;
-    public Stamina stamina;
     public BattleState state;
-
-    // WEAPONS / ATTACKS
-
 
     // Start is called before the first frame update
     void Start()
@@ -39,11 +32,22 @@ public class BattleSystem : MonoBehaviour
         menuSystem.CloseMenus();
         menuSystem.LoadWeaponButtons(player.weapons);
         menuSystem.LoadAttackButtons(player.currentWeapon.attackList);
+        menuSystem.LoadSidekickButtons(player.sidekicks);
+        menuSystem.LoadItemButtons(player.items);
+        dialog.CloseDialogBox();
     }
 
     // Update is called once per frame
     void Update()
     {
+        // IF MENU BUTTON IS CLICKED
+        if (state == BattleState.NOT_IN_BATTLE && !player.isInDialog)
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                menuSystem.ToggleOverworldMenu(player);
+            }
+        }
         // BATTLE LOGIC
         if (!delaying)
         {
@@ -59,7 +63,7 @@ public class BattleSystem : MonoBehaviour
 
                 // enter battle dialog
                 dialog.ResetDialogString();
-                dialog.DisplayDialog(enemy.characterName + " wants to fight!");
+                dialog.DisplaySystemDialog(enemy.characterName + " wants to fight!");
                 dialog.ResetDialogString();
 
                 // set up battle HUD and menus
@@ -81,14 +85,17 @@ public class BattleSystem : MonoBehaviour
             else if (state == BattleState.SIDEKICK_TURN)
             {
                 player.currentSidekick.MakeMove();
-                state = BattleState.RECOVER_STAMINA;
+                if (enemy.currentHealth <= 0)
+                    state = BattleState.WON1;
+                else
+                    state = BattleState.RECOVER_STAMINA;
             }
             // STATE STAMINA RECOVERY
             else if (state == BattleState.RECOVER_STAMINA)
             {
                 player.RecoverStamina();
                 // PRINT INFO
-                dialog.DisplayDialog(player.characterName + " has recovered " + player.staminaRecovery + " stamina.");
+                dialog.DisplaySystemDialog(player.characterName + " has recovered " + player.staminaRecovery + " stamina.");
                 dialog.ResetDialogString();
 
                 state = BattleState.PLAYER_TURN;
@@ -104,8 +111,8 @@ public class BattleSystem : MonoBehaviour
                 menuSystem.ButtonsEnabled(false);
                 enemy.gameObject.SetActive(false);
                 // VICTORY DIALOG
-                dialog.DisplayDialog(player.characterName + " has defeated " + enemy.characterName + "!\n" + player.characterName + " receives " + enemy.goldWorth + " gold coins.");
-                dialog.DisplayDialog(player.characterName + " and " + player.currentSidekick.sidekickName + " receive " + enemy.experienceWorth + " experience.");
+                dialog.DisplaySystemDialog(player.characterName + " has defeated " + enemy.characterName + "!\n" + player.characterName + " receives " + enemy.goldWorth + " gold coins.");
+                dialog.DisplaySystemDialog(player.characterName + " and " + player.currentSidekick.sidekickName + " receive " + enemy.experienceWorth + " experience.");
                 menuSystem.HideBattleHUDs();
                 StartCoroutine(BattleDelay(3));
                 dialog.ResetDialogString();
@@ -115,7 +122,7 @@ public class BattleSystem : MonoBehaviour
             { 
                 if (player.IncreaseExperience(enemy.experienceWorth))
                 {
-                    dialog.DisplayDialog("Level up! Choose a trait to increase it's level.");
+                    dialog.DisplaySystemDialog("Level up! Choose a trait to increase it's level.");
                     menuSystem.GoToLevelUpMenu();
                     menuSystem.HideBattleHUDs();
                     state = BattleState.WAITING;
@@ -143,6 +150,8 @@ public class BattleSystem : MonoBehaviour
             else if (state == BattleState.WON3)
             {
                 menuSystem.CloseMenus();
+                player.SetMovementLocked(false);
+                dialog.CloseDialogBox();
                 state = BattleState.NOT_IN_BATTLE;
             }
         }
@@ -151,6 +160,11 @@ public class BattleSystem : MonoBehaviour
     public void SetEnemy(Enemy enemy)
     {
         this.enemy = enemy;
+    }
+
+    public Enemy GetEnemy()
+    {
+        return enemy;
     }
 
     public void EnemyDoAttack(Attack attack)
@@ -169,7 +183,7 @@ public class BattleSystem : MonoBehaviour
             attackDialog += "\nGlancing blow! ";
             damage = attack.glancingBlowDamage;
         }
-        dialog.DisplayDialog(attackDialog + attack.attackName + " deals " + (int)damage + " damage to " + player.characterName + ".");
+        dialog.DisplaySystemDialog(attackDialog + attack.attackName + " deals " + (int)damage + " damage to " + player.characterName + ".");
         player.currentHealth = player.currentHealth - (int)damage;
         dialog.ResetDialogString();
         StartCoroutine(BattleDelay(3));
@@ -197,28 +211,15 @@ public class BattleSystem : MonoBehaviour
         if (attack.physical)
             damage = damage * (1 + (player.physicalStrengthLevel * 0.50f));
         player.AttackAnimation(attack.attackName.ToLower());
-        dialog.DisplayDialog(attackDialog + attack.attackName + " deals " + (int)damage + " damage to " + player.characterName + ".");
+        dialog.DisplaySystemDialog(attackDialog + attack.attackName + " deals " + (int)damage + " damage to " + enemy.characterName + ".");
         enemy.currentHealth = enemy.currentHealth - (int)damage;
         dialog.ResetDialogString();
         if (enemy.currentHealth <= 0)
-            state = BattleState.WON1;
-    }
-
-    public bool BattleSetCurrentWeapon(Weapon weapon)
-    {
-        if (!player.BattleSetCurrentWeapon(weapon))
         {
-            dialog.DisplayDialog("This weapon is already in use.");
-            dialog.ResetDialogString();
-            return false;
+            state = BattleState.WON1;
+            menuSystem.ButtonsEnabled(false);
+            StartCoroutine(BattleDelay(2));
         }
-        else
-            return true;
-    }
-
-    public void SetCurrentWeapon(Weapon weapon)
-    {
-        player.SetWeapon(weapon);
     }
 
     public Player GetPlayer()
@@ -226,7 +227,7 @@ public class BattleSystem : MonoBehaviour
         return player;
     }
 
-    IEnumerator BattleDelay(float time)
+    public IEnumerator BattleDelay(float time)
     {
         delaying = true;
         yield return new WaitForSeconds(time);

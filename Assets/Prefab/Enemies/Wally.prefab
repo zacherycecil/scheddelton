@@ -46,8 +46,10 @@ MonoBehaviour:
   attackName: Headbutt
   staminaNeeded: 0
   baseDamage: 6
-  accuracy: 70
   glancingBlowDamage: 2
+  accuracy: 70
+  elemental: 0
+  physical: 0
 --- !u!1 &517899498
 GameObject:
   m_ObjectHideFlags: 0
@@ -94,8 +96,10 @@ MonoBehaviour:
   attackName: Tail Slam
   staminaNeeded: 1
   baseDamage: 4
-  accuracy: 95
   glancingBlowDamage: 0
+  accuracy: 95
+  elemental: 0
+  physical: 0
 --- !u!1 &2517717669666467876
 GameObject:
   m_ObjectHideFlags: 0
@@ -262,7 +266,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a5a3727cd5ecc7499a2d0d941990572, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bs: {fileID: 0}
+  bs: {fileID: 2662861204122217165, guid: 109bf7dab31dcb64498befe2a94c9d38, type: 3}
   maxHealth: 15
   currentHealth: 15
   characterName: Wally
@@ -273,7 +277,7 @@ MonoBehaviour:
   - {fileID: 106525082}
   anim: {fileID: 2517717669666467899}
   moveSpeed: 0.5
-  target: {fileID: 0}
+  target: {fileID: 3857555828955789681, guid: 38aa0ef6e263197479c0ef10fcc9d683, type: 3}
   combatBeginRadius: 0.4
   chaseRadius: 0.8
   homePosition: {fileID: 0}

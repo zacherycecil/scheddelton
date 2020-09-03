@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Scheddelton
   - DialogCanvas
+  - Friendly
   layers:
   - Default
   - TransparentFX

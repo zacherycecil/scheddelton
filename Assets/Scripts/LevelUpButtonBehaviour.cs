@@ -6,7 +6,6 @@ using UnityEngine.EventSystems;
 
 public class LevelUpButtonBehaviour : ButtonBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    public Player player;
     public String traitDescription;
 
     public void OnPointerEnter(PointerEventData pointerEventData)
@@ -25,23 +24,27 @@ public class LevelUpButtonBehaviour : ButtonBehaviour, IPointerEnterHandler, IPo
     {
         player.physicalStrengthLevel++;
         battleSystem.state = BattleState.PLAYER_LEVEL_UP;
+        dialog.ResetDialogString();
     }
 
     public void IncreaseCunning()
     {
         player.cunningLevel++;
         battleSystem.state = BattleState.PLAYER_LEVEL_UP;
+        dialog.ResetDialogString();
     }
 
     public void IncreaseElementalControl()
     {
         player.elementalControlLevel++;
         battleSystem.state = BattleState.PLAYER_LEVEL_UP;
+        dialog.ResetDialogString();
     }
 
     public void IncreaseGamble()
     {
         player.gambleLevel++;
         battleSystem.state = BattleState.PLAYER_LEVEL_UP;
+        dialog.ResetDialogString();
     }
 }

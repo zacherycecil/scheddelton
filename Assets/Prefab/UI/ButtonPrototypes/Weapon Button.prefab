@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3210343723942588995
+--- !u!1 &119240857586289001
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3210343723942588994}
-  - component: {fileID: 3210343723942588992}
-  - component: {fileID: 3210343723942588993}
+  - component: {fileID: 119240857586289000}
+  - component: {fileID: 119240857586289002}
+  - component: {fileID: 119240857586289003}
   m_Layer: 5
   m_Name: Weapon1 TMP
   m_TagString: Untagged
@@ -18,40 +18,40 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &3210343723942588994
+--- !u!224 &119240857586289000
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3210343723942588995}
+  m_GameObject: {fileID: 119240857586289001}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 3210343724418692527}
+  m_Father: {fileID: 119240857923948165}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 48}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 75, y: -16}
+  m_SizeDelta: {x: 150.00003, y: 32}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &3210343723942588992
+--- !u!222 &119240857586289002
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3210343723942588995}
+  m_GameObject: {fileID: 119240857586289001}
   m_CullTransparentMesh: 0
---- !u!114 &3210343723942588993
+--- !u!114 &119240857586289003
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3210343723942588995}
+  m_GameObject: {fileID: 119240857586289001}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
@@ -64,7 +64,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Kamikaze
+  m_text: ' Hand Wraps
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -132,11 +134,11 @@ MonoBehaviour:
   m_pageToDisplay: 1
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
-    textComponent: {fileID: 3210343723942588993}
-    characterCount: 8
+    textComponent: {fileID: 119240857586289003}
+    characterCount: 12
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 1
+    spaceCount: 3
+    wordCount: 3
     linkCount: 0
     lineCount: 1
     pageCount: 1
@@ -156,7 +158,7 @@ MonoBehaviour:
   - {fileID: 0}
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!1 &3210343724418692520
+--- !u!1 &119240857923948162
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -164,54 +166,53 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3210343724418692527}
-  - component: {fileID: 3210343724418692515}
-  - component: {fileID: 3210343724418692524}
-  - component: {fileID: 3210343724418692525}
-  - component: {fileID: 3210343724418692526}
-  - component: {fileID: 1680079832401362728}
+  - component: {fileID: 119240857923948165}
+  - component: {fileID: 119240857923948169}
+  - component: {fileID: 119240857923948166}
+  - component: {fileID: 119240857923948167}
+  - component: {fileID: 119240857923948164}
   m_Layer: 5
-  m_Name: Menu Button
+  m_Name: Weapon Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &3210343724418692527
+--- !u!224 &119240857923948165
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3210343724418692520}
+  m_GameObject: {fileID: 119240857923948162}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 3210343723942588994}
+  - {fileID: 119240857586289000}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 64, y: 24}
-  m_SizeDelta: {x: 128, y: 48}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &3210343724418692515
+--- !u!222 &119240857923948169
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3210343724418692520}
+  m_GameObject: {fileID: 119240857923948162}
   m_CullTransparentMesh: 0
---- !u!114 &3210343724418692524
+--- !u!114 &119240857923948166
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3210343724418692520}
+  m_GameObject: {fileID: 119240857923948162}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -234,13 +235,13 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &3210343724418692525
+--- !u!114 &119240857923948167
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3210343724418692520}
+  m_GameObject: {fileID: 119240857923948162}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
@@ -273,11 +274,11 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 3210343724418692524}
+  m_TargetGraphic: {fileID: 119240857923948166}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3210343724418692526}
+      - m_Target: {fileID: 119240857923948164}
         m_MethodName: SetCurrentWeapon
         m_Mode: 1
         m_Arguments:
@@ -288,42 +289,23 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &3210343724418692526
+--- !u!114 &119240857923948164
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3210343724418692520}
+  m_GameObject: {fileID: 119240857923948162}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85d5ae7df464dc441b529baf509facb8, type: 3}
+  m_Script: {fileID: 11500000, guid: 9c3c00a530a4c3f498a1f208354f6a0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bs: {fileID: 0}
-  buttonIndex: 0
---- !u!114 &1680079832401362728
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3210343724418692520}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Padding:
-    m_Left: 0
-    m_Right: 48
-    m_Top: 0
-    m_Bottom: 0
-  m_ChildAlignment: 0
-  m_Spacing: 0
-  m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 0
-  m_ChildControlWidth: 1
-  m_ChildControlHeight: 0
-  m_ChildScaleWidth: 0
-  m_ChildScaleHeight: 0
+  battleSystem: {fileID: 2662861204122217165, guid: 109bf7dab31dcb64498befe2a94c9d38,
+    type: 3}
+  menuSystem: {fileID: 5039219523366961019, guid: ac5fb86cf43a4ce49b2ad9d5df7a274f,
+    type: 3}
+  stamina: {fileID: 3994740353482079107, guid: db2d38ec5a86979439fdddc923f70f0f, type: 3}
+  dialog: {fileID: 3682955529086945422, guid: 177e910fb46e55d43bfbe18f0e10f3a2, type: 3}
+  player: {fileID: 4262768603962075880, guid: 38aa0ef6e263197479c0ef10fcc9d683, type: 3}
+  weapon: {fileID: 0}

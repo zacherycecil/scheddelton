@@ -15,7 +15,8 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D myRigidbody;
     private Vector3 change;
     private Animator animator;
-    public bool inBattle;
+    public bool lockedMovement;
+    public Enemy enemy;
 
     // Start is called before the first frame update
     void Start()
@@ -27,22 +28,36 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        GetPlayerInputs();
         if (bs.state == BattleState.NOT_IN_BATTLE)
         {
-            change = Vector3.zero;
-            change.x = Input.GetAxisRaw("Horizontal");
-            change.y = Input.GetAxisRaw("Vertical");
-            //UnityEngine.Debug.Log(change);
-            UpdateAnimationAndMove();
+            MoveCharacter();
+            MoveAnimation();
         }
         else
-            animator.SetBool("inBattle", true);
+            BattleAnimation();
     }
 
-    void UpdateAnimationAndMove()
+    void GetPlayerInputs()
+    {
+        change = Vector3.zero;
+        if (!lockedMovement)
+        {
+            change.x = Input.GetAxisRaw("Horizontal");
+            change.y = Input.GetAxisRaw("Vertical");
+        }
+    }
+
+    void MoveCharacter()
+    {
+        myRigidbody.MovePosition(transform.position + change.normalized * speed * Time.fixedDeltaTime);
+    }
+
+    void MoveAnimation()
     {
         animator.SetBool("inBattle", false);
-        if (change != Vector3.zero)
+
+        if (IsPlayerMoving())
         {
             MoveCharacter();
             animator.SetFloat("x", change.x);
@@ -55,6 +70,34 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    void BattleAnimation()
+    {
+        lockedMovement = true;
+        animator.SetBool("inBattle", true);
+        enemy = bs.GetEnemy();
+        animator.SetFloat("x", enemy.gameObject.transform.position.x - this.gameObject.transform.position.x);
+    }
+
+    public bool IsPlayerMoving()
+    {
+        return change != Vector3.zero;
+    }
+
+    public void LockMovement()
+    {
+        lockedMovement = true;
+    }
+
+    public void UnlockMovement()
+    {
+        lockedMovement = false;
+    }
+
+    public void SetIdleAnimation()
+    {
+        animator.SetBool("moving", false);
+    }
+
     public void AttackAnimation(String triggerName)
     {
         StartCoroutine(AnimationDelay(triggerName));
@@ -65,10 +108,5 @@ public class PlayerMovement : MonoBehaviour
         animator.SetTrigger(triggerName);
         yield return new WaitForSeconds(0.1f);
         animator.SetTrigger(triggerName);
-    }
-
-    void MoveCharacter()
-    {
-        myRigidbody.MovePosition(transform.position + change.normalized * speed * Time.fixedDeltaTime);
     }
 }

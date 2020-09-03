@@ -8,6 +8,7 @@ public class Sidekick : MonoBehaviour
     public String sidekickName;
     public Player player;
     public LevelSystem level;
+    public float switchCost;
 
     // MOVEMENT VARIABLES
     float x;

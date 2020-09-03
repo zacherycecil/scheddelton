@@ -19,18 +19,32 @@ public class WeaponButtonBehaviour : ButtonBehaviour, IPointerEnterHandler, IPoi
 
     public void SetCurrentWeapon()
     {
-        if(battleSystem.state == BattleState.NOT_IN_BATTLE)
+        if (battleSystem.state == BattleState.NOT_IN_BATTLE && player.currentWeapon != weapon)
         {
-            battleSystem.SetCurrentWeapon(weapon);
+            player.SetWeapon(weapon);
             menuSystem.LoadAttackButtons(weapon.attackList);
             menuSystem.SetWeaponIcon(weapon);
+            menuSystem.ReturnToMain();
         }
         else
-            if (battleSystem.BattleSetCurrentWeapon(weapon))
+        {
+            if (player.currentWeapon == weapon)
+            {
+                dialog.DisplayDialog("This weapon is already being used.");
+                dialog.ResetDialogString();
+            }
+            else if (stamina.UseStamina(weapon.switchCost))
             {
                 menuSystem.LoadAttackButtons(weapon.attackList);
                 menuSystem.GoToMainBattleMenu();
                 menuSystem.SetWeaponIcon(weapon);
+                menuSystem.ReturnToMain();
             }
+            else
+            {
+                dialog.DisplayDialog("Not enough stamina for this action!");
+                dialog.ResetDialogString();
+            }
+        }
     }
 }
