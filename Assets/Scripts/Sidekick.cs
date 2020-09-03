@@ -47,10 +47,12 @@ public class Sidekick : MonoBehaviour
     public void SetAnimatorValues()
     {
         position = myTransform.position;
-        x = (position - previousPosition).x;
-        y = (position - previousPosition).y;
-        if (x != 0 || y != 0)
+        if((position - previousPosition).x != 0 || (position - previousPosition).y != 0) // if character has moved
+        {
+            x = (position - previousPosition).x;
+            y = (position - previousPosition).y;
             moving = true;
+        }
         else
             moving = false;
         anim.SetFloat("x", x);

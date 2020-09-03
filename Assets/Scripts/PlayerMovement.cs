@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Diagnostics;
@@ -34,10 +35,13 @@ public class PlayerMovement : MonoBehaviour
             //UnityEngine.Debug.Log(change);
             UpdateAnimationAndMove();
         }
+        else
+            animator.SetBool("inBattle", true);
     }
 
     void UpdateAnimationAndMove()
     {
+        animator.SetBool("inBattle", false);
         if (change != Vector3.zero)
         {
             MoveCharacter();
@@ -49,6 +53,18 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetBool("moving", false);
         }
+    }
+
+    public void AttackAnimation(String triggerName)
+    {
+        StartCoroutine(AnimationDelay(triggerName));
+    }
+
+    IEnumerator AnimationDelay(String triggerName)
+    {
+        animator.SetTrigger(triggerName);
+        yield return new WaitForSeconds(0.1f);
+        animator.SetTrigger(triggerName);
     }
 
     void MoveCharacter()

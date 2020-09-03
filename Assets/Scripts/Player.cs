@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,6 +10,7 @@ public class Player : Character
     public Weapon currentWeapon;
 
     public Stamina stamina;
+    public Animator anim;
 
     public float staminaRecovery;
 
@@ -22,10 +24,9 @@ public class Player : Character
     public int elementalControlLevel;
     public int gambleLevel;
 
-    public void AddWeapon(Weapon weapon)
+    public void AttackAnimation(String triggerName)
     {
-       weapons.Add(weapon);
-       currentWeapon = weapon;
+        this.gameObject.GetComponent<PlayerMovement>().AttackAnimation(triggerName);
     }
 
     public void ResetStamina()

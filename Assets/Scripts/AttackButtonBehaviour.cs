@@ -20,8 +20,10 @@ public class AttackButtonBehaviour : ButtonBehaviour, IPointerEnterHandler, IPoi
 
     public void DoAttack()
     {
-        if(stamina.UseStamina(attack.staminaNeeded))
+        if (stamina.UseStamina(attack.staminaNeeded))
+        {
             battleSystem.PlayerDoAttack(attack);
+        }
         menuSystem.GoToMainBattleMenu();
     }
 }
