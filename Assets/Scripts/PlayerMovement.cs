@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Specialized;
@@ -75,7 +75,8 @@ public class PlayerMovement : MonoBehaviour
         lockedMovement = true;
         animator.SetBool("inBattle", true);
         enemy = bs.GetEnemy();
-        animator.SetFloat("x", enemy.gameObject.transform.position.x - this.gameObject.transform.position.x);
+        animator.SetFloat("x", (enemy.gameObject.transform.position - this.gameObject.transform.position).x);
+	UnityEngine.Debug.Log(enemy.gameObject.transform.position.x + " " + this.gameObject.transform.position.x);
     }
 
     public bool IsPlayerMoving()

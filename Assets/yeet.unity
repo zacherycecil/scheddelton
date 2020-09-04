@@ -1673,7 +1673,7 @@ PrefabInstance:
         type: 3}
       propertyPath: dialog
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1677355829}
     - target: {fileID: 6085388064871311421, guid: 65dc621d216e9e342a6bd93c46bbb450,
         type: 3}
       propertyPath: stamina
@@ -2077,10 +2077,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67a5aa3c5fee91b4b9cc76ec008ab2b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogBox: {fileID: 3682955529162247389}
-  character: {fileID: 1630424168}
-  dialogList: []
-  characterPortrait: {fileID: 195112821}
 --- !u!1 &219269833
 GameObject:
   m_ObjectHideFlags: 0
@@ -3175,8 +3171,8 @@ Transform:
   m_LocalScale: {x: 0.3125, y: 0.3125, z: 1}
   m_Children:
   - {fileID: 994252658}
-  - {fileID: 1820093537}
   - {fileID: 905301280}
+  - {fileID: 1820093537}
   - {fileID: 1836556201}
   - {fileID: 102108529}
   m_Father: {fileID: 0}
@@ -4703,6 +4699,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3210343724418692526, guid: 468c9ac81b8957b429ef01377a3e4af1,
+        type: 3}
+      propertyPath: dialog
+      value: 
+      objectReference: {fileID: 1677355829}
     - target: {fileID: 3210343724418692527, guid: 468c9ac81b8957b429ef01377a3e4af1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4972,7 +4973,7 @@ MonoBehaviour:
   battleSystem: {fileID: 61366812}
   menuSystem: {fileID: 844056337}
   stamina: {fileID: 1862485898}
-  dialog: {fileID: 0}
+  dialog: {fileID: 1677355829}
   player: {fileID: 1630424168}
   attack: {fileID: 0}
 --- !u!114 &771878040
@@ -6146,7 +6147,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 429121771}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &905301281
 TilemapRenderer:
@@ -9506,7 +9507,7 @@ PrefabInstance:
         type: 3}
       propertyPath: dialog
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1677355829}
     - target: {fileID: 119240857923948164, guid: 45febb525de3e3040b5f26fb20987144,
         type: 3}
       propertyPath: player
@@ -11290,7 +11291,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 429121771}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &1820093538
 TilemapRenderer:
@@ -13362,7 +13363,7 @@ MonoBehaviour:
   battleSystem: {fileID: 61366812}
   menuSystem: {fileID: 844056337}
   stamina: {fileID: 1862485898}
-  dialog: {fileID: 0}
+  dialog: {fileID: 1677355829}
   player: {fileID: 1630424168}
   item: {fileID: 0}
 --- !u!114 &2079833455

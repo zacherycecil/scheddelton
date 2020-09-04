@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,13 +11,13 @@ public class LevelUpButtonBehaviour : ButtonBehaviour, IPointerEnterHandler, IPo
     public void OnPointerEnter(PointerEventData pointerEventData)
     {
         dialog.ResetDialogString();
-        dialog.DisplayDialog("Level up! Choose a trait to increase it's level.\n" + traitDescription);
+        dialog.DisplaySystemDialog("Level up! Choose a trait to increase it's level.\n" + traitDescription);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         dialog.ResetDialogString();
-        dialog.DisplayDialog("Level up! Choose a trait to increase it's level.\n");
+        dialog.DisplaySystemDialog("Level up! Choose a trait to increase it's level.\n");
     }
 
     public void IncreasePhysicalStrength()

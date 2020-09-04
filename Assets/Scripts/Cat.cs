@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -33,7 +33,7 @@ public class Cat : Sidekick
             damage = attack.glancingBlowDamage;
         }
         Enemy enemy = battleSystem.GetEnemy();
-        dialog.DisplayDialog(attackDialog + attack.attackName + " deals " + (int)damage + " damage to " + enemy.characterName + ".");
+        dialog.DisplaySystemDialog(attackDialog + attack.attackName + " deals " + (int)damage + " damage to " + enemy.characterName + ".");
         enemy.currentHealth = enemy.currentHealth - (int)damage;
         dialog.ResetDialogString();
         StartCoroutine(battleSystem.BattleDelay(3));
