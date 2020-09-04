@@ -15,9 +15,7 @@ public class Sidekick : MonoBehaviour
     float y;
     bool moving;
 
-    Vector2 position;
     Vector2 previousPosition;
-
     public Transform myTransform;
 
     // ANIMATOR
@@ -47,19 +45,42 @@ public class Sidekick : MonoBehaviour
 
     public void SetAnimatorValues()
     {
-        position = myTransform.position;
-        if((position - previousPosition).x != 0 || (position - previousPosition).y != 0) // if character has moved
+        moving = true;
+        if (myTransform.position.x == previousPosition.x && myTransform.position.y == previousPosition.y)
+            moving = false;
+        // X POSITION MOVING
+        UnityEngine.Debug.Log(myTransform.position.x + " " + previousPosition.x);
+        if (Math.Abs(myTransform.position.x - previousPosition.x) > Math.Abs(myTransform.position.y - previousPosition.y))
         {
-            x = (position - previousPosition).x;
-            y = (position - previousPosition).y;
-            moving = true;
+            y = 0;
+            if (myTransform.position.x > previousPosition.x)
+                x = 1;
+            else if (myTransform.position.x < previousPosition.x)
+                x = -1;
+            else
+                x = 0;
         }
         else
-            moving = false;
-        anim.SetFloat("x", x);
-        anim.SetFloat("y", y);
+        {
+            x = 0;
+            // Y POSITION MOVING
+            if (myTransform.position.y > previousPosition.y)
+                y = 1;
+            else if (myTransform.position.y < previousPosition.y)
+                y = -1;
+            else
+                y = 0;
+        }
+
+        if (x != 0 || y != 0)
+        {
+            anim.SetFloat("x", x);
+            anim.SetFloat("y", y);
+        }
         anim.SetBool("moving", moving);
-        previousPosition = position;
+        if (myTransform.position.x != previousPosition.x)
+            UnityEngine.Debug.Log((x + " " + y));
+        previousPosition = myTransform.position;
     }
 
     public void SetInitialPreviousPosition()

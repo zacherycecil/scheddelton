@@ -76,7 +76,7 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("inBattle", true);
         enemy = bs.GetEnemy();
         animator.SetFloat("x", (enemy.gameObject.transform.position - this.gameObject.transform.position).x);
-	UnityEngine.Debug.Log(enemy.gameObject.transform.position.x + " " + this.gameObject.transform.position.x);
+	    UnityEngine.Debug.Log(enemy.gameObject.transform.position.x + " " + this.gameObject.transform.position.x);
     }
 
     public bool IsPlayerMoving()
