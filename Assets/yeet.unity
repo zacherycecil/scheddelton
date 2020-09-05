@@ -2710,6 +2710,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Oliver
       objectReference: {fileID: 0}
+    - target: {fileID: 4429565773455037205, guid: 6e7551b0d293dbf4ea6b9934daa02c19,
+        type: 3}
+      propertyPath: m_TagString
+      value: Friendly
+      objectReference: {fileID: 0}
     - target: {fileID: 4429565773455037210, guid: 6e7551b0d293dbf4ea6b9934daa02c19,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3026,7 +3031,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1563088012}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1221687685}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0debaf389f8c826438045de16b4815f1, type: 3}
@@ -3314,20 +3319,6 @@ MonoBehaviour:
   player: {fileID: 1630424168}
   interactKey: 101
   inRange: 0
-  action:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1777359792}
-        m_MethodName: NextDialog
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!61 &480885500
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8575,6 +8566,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1210957769}
   m_CullTransparentMesh: 0
+--- !u!1 &1221687685 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1243434254092250408, guid: 95ac17edc60e27e468d46191e5451d7a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1563088012}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1221687686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1221687685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97f485a257585b942a2d1765ea4feadf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bs: {fileID: 61366812}
+  maxHealth: 0
+  currentHealth: 0
+  characterName: Mittens
+  characterPortrait: {fileID: 21300000, guid: 39ffd95f49ea57340b09704d5f55232f, type: 3}
+  dialog: {fileID: 1677355829}
+  player: {fileID: 1630424168}
+  menuSystem: {fileID: 844056337}
+  dialogList:
+  - character: {fileID: 1221687686}
+    str: Let's keep going!
+  - character: {fileID: 1221687686}
+    str: Wally needs help.
+  - character: {fileID: 1630424168}
+    str: Sounds good, we got this.
+  portraitObject: {fileID: 1481372363}
+  inRange: 0
+--- !u!61 &1221687687
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1221687685}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.01141578, y: -0.1055536}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.32, y: 0.32}
+    newSize: {x: 0.32, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.1898179, y: 0.08602244}
+  m_EdgeRadius: 0
 --- !u!1 &1230260192
 GameObject:
   m_ObjectHideFlags: 0
@@ -9790,6 +9842,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mittens
       objectReference: {fileID: 0}
+    - target: {fileID: 1243434254092250408, guid: 95ac17edc60e27e468d46191e5451d7a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Friendly
+      objectReference: {fileID: 0}
     - target: {fileID: 1243434254092250410, guid: 95ac17edc60e27e468d46191e5451d7a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10232,6 +10289,59 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1652390202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652390200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97f485a257585b942a2d1765ea4feadf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bs: {fileID: 61366812}
+  maxHealth: 0
+  currentHealth: 0
+  characterName: 
+  characterPortrait: {fileID: 21300000, guid: 0fb6d0aa75d6cab438846336036b12b2, type: 3}
+  dialog: {fileID: 1677355829}
+  player: {fileID: 1630424168}
+  menuSystem: {fileID: 844056337}
+  dialogList:
+  - character: {fileID: 1652390202}
+    str: Let's fuck shit up.
+  - character: {fileID: 1630424168}
+    str: AYO watch the language this game sposed to be E for every one
+  portraitObject: {fileID: 1481372363}
+  inRange: 0
+--- !u!61 &1652390203
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652390200}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.002871737, y: -0.086152315}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.32, y: 0.32}
+    newSize: {x: 0.32, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.22236064, y: 0.14769536}
+  m_EdgeRadius: 0
 --- !u!1 &1652394692
 GameObject:
   m_ObjectHideFlags: 0
@@ -10903,7 +11013,8 @@ MonoBehaviour:
     str: Can you help me
   - character: {fileID: 1630424168}
     str: I will do my best!
-  portrait: {fileID: 1481372363}
+  portraitObject: {fileID: 1481372363}
+  inRange: 0
 --- !u!50 &1777359793
 Rigidbody2D:
   serializedVersion: 4

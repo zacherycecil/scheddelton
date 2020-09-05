@@ -30,7 +30,7 @@ public class WeaponButtonBehaviour : ButtonBehaviour, IPointerEnterHandler, IPoi
         {
             if (player.currentWeapon == weapon)
             {
-                dialog.DisplayDialog("This weapon is already being used.");
+                dialog.DisplaySystemDialog("This weapon is already being used.");
                 dialog.ResetDialogString();
             }
             else if (stamina.UseStamina(weapon.switchCost))
@@ -39,10 +39,11 @@ public class WeaponButtonBehaviour : ButtonBehaviour, IPointerEnterHandler, IPoi
                 menuSystem.GoToMainBattleMenu();
                 menuSystem.SetWeaponIcon(weapon);
                 menuSystem.ReturnToMain();
+                menuSystem.LoadWeaponButtons(player.weapons);
             }
             else
             {
-                dialog.DisplayDialog("Not enough stamina for this action!");
+                dialog.DisplaySystemDialog("Not enough stamina for this action!");
                 dialog.ResetDialogString();
             }
         }

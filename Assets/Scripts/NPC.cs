@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class NPC : Character
 {
@@ -17,8 +18,14 @@ public class NPC : Character
     public Player player;
     public MenuSystem menuSystem;
     public List<DialogObject> dialogList;
-    public Image portrait;
-    int counter = 0;
+    public Image portraitObject;
+    int counter;
+    public bool inRange;
+
+    void Start()
+    {
+        counter = 0;
+    }
 
     public void NextDialog()
     {
@@ -33,12 +40,8 @@ public class NPC : Character
         {
             dialog.ResetDialogString();
             dialog.DisplayDialog(dialogList[counter].str);
-            portrait.sprite = dialogList[counter].character.characterPortrait;
+            portraitObject.sprite = dialogList[counter].character.characterPortrait;
             counter++;
-            if (counter % 3 == 0)
-            {
-                dialog.ResetDialogString();
-            }
         }
     }
 }

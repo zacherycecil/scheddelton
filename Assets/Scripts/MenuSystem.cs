@@ -73,7 +73,8 @@ public class MenuSystem : MonoBehaviour
         {
             battleUI.SetActive(false);
             dialoxBox.SetActive(false);
-            UnityEngine.Debug.Log("1"); 
+            UnityEngine.Debug.Log("1");
+            player.SetMovementLocked(false);
         }
         else
         {
@@ -82,6 +83,7 @@ public class MenuSystem : MonoBehaviour
             LoadPlayerBattleHUD(player);
             dialoxBox.SetActive(false);
             UnityEngine.Debug.Log("2");
+            player.SetMovementLocked(true);
         }
     }
 
@@ -290,6 +292,7 @@ public class MenuSystem : MonoBehaviour
         playerHud.SetCharacter(player);
         playerHud.LoadCard();
         playerHud.gameObject.SetActive(true);
+        playerHud.SetWeaponIcon(player.currentWeapon.weaponSprite);
     }
 
     public void HideBattleHUDs()
