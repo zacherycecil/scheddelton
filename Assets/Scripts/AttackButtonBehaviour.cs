@@ -23,7 +23,12 @@ public class AttackButtonBehaviour : ButtonBehaviour, IPointerEnterHandler, IPoi
         if (stamina.UseStamina(attack.staminaNeeded))
         {
             battleSystem.PlayerDoAttack(attack);
+            menuSystem.GoToMainBattleMenu();
         }
-        menuSystem.GoToMainBattleMenu();
+        else
+        {
+            dialog.DisplayDialog("Not enough stamina for this action!");
+            dialog.ResetDialogString();
+        }
     }
 }

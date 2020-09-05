@@ -9,6 +9,7 @@ public class ButtonBehaviour : MonoBehaviour
     public MenuSystem menuSystem;
     public Stamina stamina;
     public DialogSystem dialog;
+    public Player player;
 
     public void GoToWeaponsMenu()
     {
@@ -20,10 +21,29 @@ public class ButtonBehaviour : MonoBehaviour
         menuSystem.GoToAttackMenu();
     }
 
+    public void GoToSidekickMenu()
+    {
+        menuSystem.GoToSidekickMenu();
+    }
+
+    public void GoToPocketsMenu()
+    {
+        menuSystem.GoToPocketsMenu();
+    }
+
+    public void GetPlayerStats()
+    {
+        dialog.DisplayDialog(player.characterName + "\nLevel: " + player.GetLevel() + ", " + player.PercentToNextLevel() + "% to next level.");
+        dialog.DisplayDialog("Physical Strength: " + player.physicalStrengthLevel);
+        dialog.DisplayDialog("Cunning: " + player.cunningLevel);
+        dialog.DisplayDialog("Elemental Control: " + player.elementalControlLevel);
+        dialog.DisplayDialog("Gamble Level: " + player.gambleLevel);
+        dialog.ResetDialogString();
+    }
+
     public void GoBack()
     {
         if(battleSystem.state == BattleState.NOT_IN_BATTLE)
-
             menuSystem.GoToOverworldMenu();
         else
             menuSystem.GoToMainBattleMenu();

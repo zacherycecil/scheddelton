@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Character : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class Character : MonoBehaviour
     public int maxHealth;
     public int currentHealth;
     public String characterName;
+    public Sprite characterPortrait;
 
     // Start is called before the first frame update
     void Start()

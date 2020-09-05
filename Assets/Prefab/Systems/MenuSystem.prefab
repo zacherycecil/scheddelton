@@ -1,0 +1,104 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5039219523366960997
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5039219523366961018}
+  - component: {fileID: 5039219523366961019}
+  m_Layer: 0
+  m_Name: MenuSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5039219523366961018
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5039219523366960997}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.107, y: -0.129, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5039219523366961019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5039219523366960997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07c775e00ac4c2044a4eb53d1716353b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponButtons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  attackButtons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  mainBattleMenuButtons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  levelUpButtons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  mainBattleMenu: {fileID: 3984883507717919072, guid: d6b49790bda55b346aa2bf76de26c14d,
+    type: 3}
+  weaponsMenu: {fileID: 5868885619531603331, guid: 5f06478e89db32e49a04cf2255394ba3,
+    type: 3}
+  attackMenu: {fileID: 4415384497302601520, guid: 219ff7cf9bc08d042921a9c141a382d1,
+    type: 3}
+  levelUpMenu: {fileID: 5403669408544127021, guid: 554c51d47f19fcf49af8403d9ddbbf32,
+    type: 3}
+  overworldMenu: {fileID: 6917268428633664512, guid: c3248f9ad0ef25941a9d060570e2010e,
+    type: 3}
+  sidekicksMenu: {fileID: 1453775563767384865, guid: c3a39aa7d85810b46916b220c03772dc,
+    type: 3}
+  battleUI: {fileID: 2864313571100926106, guid: 197de0f9d01cba94eb27576ecbf89ec8,
+    type: 3}
+  playerHud: {fileID: 3287737852411680682, guid: 743453e0e32d59145918c1bb5fb24185,
+    type: 3}
+  enemyHudPrototype: {fileID: 8572948714279685665, guid: 832e22992df83ea4e8952709c73a380b,
+    type: 3}
+  sidekickButtonPrototype: {fileID: 6184573520761046817, guid: 65dc621d216e9e342a6bd93c46bbb450,
+    type: 3}
+  weaponButtonPrototype: {fileID: 119240857923948167, guid: 45febb525de3e3040b5f26fb20987144,
+    type: 3}
+  backButtonPrototype: {fileID: 8512085305203146615, guid: c99382a65c3e10a4494c9b81a312ba5d,
+    type: 3}
+  sidekickMenuPanel: {fileID: 5283793148358539448, guid: bdec38da8adb0dd4985ccb15d4cce283,
+    type: 3}
+  weaponMenuPanel: {fileID: 6708017065869103292, guid: 8819bb0156d69954695836d2e1b31c79,
+    type: 3}
+  weaponIcon: {fileID: 8524996007662152153, guid: 43ac8147ea8bfc646acc83fbabd004c9,
+    type: 3}
+  battleSystem: {fileID: 2662861204122217165, guid: 109bf7dab31dcb64498befe2a94c9d38,
+    type: 3}
+  dialoxBox: {fileID: 3682955529086945457, guid: 177e910fb46e55d43bfbe18f0e10f3a2,
+    type: 3}

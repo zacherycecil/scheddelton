@@ -10,16 +10,10 @@ public class LevelSystem : MonoBehaviour
     public int currentLevel;
     public List<int> levelUpExperience;
 
-    // LEVEL MENU
-    public GameObject menu;
-    public List<Button> levelUpMenuButtons;
-
-    public DialogSystem dialog;
-
     public bool IncreaseExperience(int exp)
     {
         currentExperience += exp;
-        if (currentExperience >= levelUpExperience[currentLevel])
+        if (currentExperience >= levelUpExperience[currentLevel+1])
         {
             // LEVEL UP
             currentLevel++;
@@ -29,9 +23,9 @@ public class LevelSystem : MonoBehaviour
             return false;
     }
 
-    public void PlayerStatIncrease()
+    public int PercentToNextLevel()
     {
-        dialog.ResetDialogString();
-        dialog.DisplayDialog("Choose one of your traits to level up.");
+        // return percent til next level
+        return (int)(100 * ((float)(currentExperience - levelUpExperience[currentLevel]) / (float)(levelUpExperience[currentLevel+1] - levelUpExperience[currentLevel])));
     }
 }
