@@ -7,6 +7,8 @@ TagManager:
   - Scheddelton
   - DialogCanvas
   - Friendly
+  - Sidekick
+  - Item
   layers:
   - Default
   - TransparentFX

@@ -8,8 +8,18 @@ public class Interaction : MonoBehaviour
     public GameObject interactionBox;
     public Player player;
     public KeyCode interactKey;
-    public bool inRange;
-    NPC npc;
+    public bool itemPickedUp;
+    public DialogSystem dialog;
+
+    // bools
+    public bool itemInRange;
+    public bool friendlyInRange;
+    public bool sidekickInRange;
+
+    // interactables
+    Interactable item;
+    Interactable friendly;
+    Interactable sidekick;
 
     // Start is called before the first frame update
     void Start()
@@ -24,31 +34,66 @@ public class Interaction : MonoBehaviour
             if ((Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)) // check if 
                 interactionBox.transform.position = new Vector2((0.25f * Input.GetAxisRaw("Horizontal")) - 0.25f + player.transform.position.x, 0.25f * Input.GetAxisRaw("Vertical") + player.transform.position.y);
 
-        if (inRange && Input.GetKeyDown(interactKey))
+        if (itemPickedUp && Input.GetKeyDown(interactKey))
+        {
+            dialog.CloseDialogBox();
+            player.SetMovementLocked(false);
+            player.IsInDialog(false);
+            itemPickedUp = false;
+        }
+        else if (itemInRange && Input.GetKeyDown(interactKey))
         {
             player.SetMovementLocked(true);
             player.IsInDialog(true);
-            // player.GetComponent<PlayerMovement>().SetIdleAnimation();
-            npc.NextDialog();
+            item.PickupItem(item.gameObject.GetComponent<Item>());
+            itemPickedUp = true;
         }
-    }
-
-    public void SetNPC(NPC npc)
-    {
-        this.npc = npc;
+        else if (friendlyInRange && Input.GetKeyDown(interactKey))
+        {
+            player.SetMovementLocked(true);
+            player.IsInDialog(true);
+            friendly.NextDialog();
+        }
+        else if (sidekickInRange && Input.GetKeyDown(interactKey))
+        {
+            player.SetMovementLocked(true);
+            player.IsInDialog(true);
+            sidekick.NextDialog();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Friendly"))
+        if (collision.gameObject.CompareTag("Item"))
         {
-            SetNPC(collision.gameObject.GetComponent<NPC>());
-            inRange = true;
+            item = collision.gameObject.GetComponent<Interactable>();
+            itemInRange = true;
+        }
+        else if (collision.gameObject.CompareTag("Friendly"))
+        {
+            friendly = collision.gameObject.GetComponent<Interactable>();
+            friendlyInRange = true;
+        }
+        else if (collision.gameObject.CompareTag("Sidekick"))
+        {
+            sidekick = collision.gameObject.GetComponent<Interactable>();
+            sidekickInRange = true;
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        inRange = false;
+        if (collision.gameObject.CompareTag("Item"))
+        {
+            itemInRange = false;
+        }
+        else if (collision.gameObject.CompareTag("Friendly"))
+        {
+            friendlyInRange = false;
+        }
+        else if (collision.gameObject.CompareTag("Sidekick"))
+        {
+            sidekickInRange = false;
+        }
     }
 }

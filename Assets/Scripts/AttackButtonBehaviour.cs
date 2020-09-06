@@ -27,7 +27,7 @@ public class AttackButtonBehaviour : ButtonBehaviour, IPointerEnterHandler, IPoi
         }
         else
         {
-            dialog.DisplayDialog("Not enough stamina for this action!");
+            dialog.DisplaySystemDialog("Not enough stamina for this action!");
             dialog.ResetDialogString();
         }
     }

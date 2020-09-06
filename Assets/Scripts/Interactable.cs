@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 
-public class NPC : Character
+public class Interactable : Character
 {
     [System.Serializable]
     public struct DialogObject
@@ -20,7 +20,6 @@ public class NPC : Character
     public List<DialogObject> dialogList;
     public Image portraitObject;
     int counter;
-    public bool inRange;
 
     void Start()
     {
@@ -43,5 +42,13 @@ public class NPC : Character
             portraitObject.sprite = dialogList[counter].character.characterPortrait;
             counter++;
         }
+    }
+
+    public void PickupItem(Item item)
+    {
+        dialog.DisplaySystemDialog(player.characterName + " has picked up the " + item.itemName + ".");
+        player.AddItem(item);
+        menuSystem.LoadItemButtons(player.items);
+        item.gameObject.SetActive(false);
     }
 }

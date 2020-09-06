@@ -46,6 +46,11 @@ public class Player : Character
         items.Remove(item);
     }
 
+    public void AddItem(Item item)
+    {
+        items.Add(item);
+    }
+
     // STAMINA
     public void ResetStamina()
     {

@@ -28,7 +28,7 @@ public class SidekickButtonBehaviour : ButtonBehaviour, IPointerEnterHandler, IP
         {
             if (player.currentSidekick == sidekick)
             {
-                dialog.DisplayDialog("This sidekick is already by your side.");
+                dialog.DisplaySystemDialog("This sidekick is already by your side.");
                 dialog.ResetDialogString();
             }
             else if(stamina.UseStamina(sidekick.switchCost))
@@ -38,7 +38,7 @@ public class SidekickButtonBehaviour : ButtonBehaviour, IPointerEnterHandler, IP
             }
             else
             {
-                dialog.DisplayDialog("Not enough stamina for this action!");
+                dialog.DisplaySystemDialog("Not enough stamina for this action!");
                 dialog.ResetDialogString();
             }
         }

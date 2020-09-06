@@ -33,12 +33,12 @@ public class ButtonBehaviour : MonoBehaviour
 
     public void GetPlayerStats()
     {
-        dialog.DisplayDialog(player.characterName + "\nLevel: " + player.GetLevel() + ", " + player.PercentToNextLevel() + "% to next level.");
-        dialog.DisplayDialog("Physical Strength: " + player.physicalStrengthLevel);
-        dialog.DisplayDialog("Cunning: " + player.cunningLevel);
-        dialog.DisplayDialog("Elemental Control: " + player.elementalControlLevel);
-        dialog.DisplayDialog("Gamble Level: " + player.gambleLevel);
-        dialog.ResetDialogString();
+        dialog.DisplaySystemDialog(player.characterName + "\nLevel: " + player.GetLevel() + ", " + player.PercentToNextLevel() + "% to next level.");
+        dialog.DisplaySystemDialog("Physical Strength: " + player.physicalStrengthLevel);
+        dialog.DisplaySystemDialog("Cunning: " + player.cunningLevel);
+        dialog.DisplaySystemDialog("Elemental Control: " + player.elementalControlLevel);
+        dialog.DisplaySystemDialog("Gamble Level: " + player.gambleLevel);
+        dialog.ResetDialogString(); 
     }
 
     public void GoBack()
