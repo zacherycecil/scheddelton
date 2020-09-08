@@ -25,6 +25,7 @@ public class BattleSystem : MonoBehaviour
     public AudioSource gong;
     public AudioSource punch;
     public BattleState state;
+    public bool inBattle;
 
     // Start is called before the first frame update
     void Start()
@@ -73,6 +74,7 @@ public class BattleSystem : MonoBehaviour
                 menuSystem.LoadAttackButtons(player.currentWeapon.attackList);
 
                 state = BattleState.WAITING;
+                inBattle = true;
             }
             // STATE ENEMY TURN
             else if (state == BattleState.ENEMY_TURN)
@@ -110,6 +112,7 @@ public class BattleSystem : MonoBehaviour
             {
                 menuSystem.ButtonsEnabled(false);
                 enemy.gameObject.SetActive(false);
+                inBattle = false;
                 // VICTORY DIALOG
                 dialog.DisplaySystemDialog(player.characterName + " has defeated " + enemy.characterName + "!\n" + player.characterName + " receives " + enemy.goldWorth + " gold coins.");
                 dialog.DisplaySystemDialog(player.characterName + " and " + player.currentSidekick.sidekickName + " receive " + enemy.experienceWorth + " experience.");

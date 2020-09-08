@@ -29,13 +29,13 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         GetPlayerInputs();
-        if (bs.state == BattleState.NOT_IN_BATTLE)
+        if (bs.inBattle)
+            BattleAnimation();
+        else
         {
             MoveCharacter();
             MoveAnimation();
         }
-        else
-            BattleAnimation();
     }
 
     void GetPlayerInputs()
@@ -97,6 +97,7 @@ public class PlayerMovement : MonoBehaviour
     public void SetIdleAnimation()
     {
         animator.SetBool("moving", false);
+        animator.SetBool("inBattle", false);
     }
 
     public void AttackAnimation(String triggerName)

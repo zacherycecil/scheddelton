@@ -10,6 +10,9 @@ public class Interaction : MonoBehaviour
     public KeyCode interactKey;
     public bool itemPickedUp;
     public DialogSystem dialog;
+    public GameObject dialogIcon;
+    public GameObject dialogIconPrototype;
+    public GameObject currentInteractable;
 
     // bools
     public bool itemInRange;
@@ -33,7 +36,7 @@ public class Interaction : MonoBehaviour
         if(!player.GetMovementLocked()) // check if player movement is locked
             if ((Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)) // check if 
                 interactionBox.transform.position = new Vector2((0.25f * Input.GetAxisRaw("Horizontal")) - 0.25f + player.transform.position.x, 0.25f * Input.GetAxisRaw("Vertical") + player.transform.position.y);
-
+        // INTERACTION
         if (itemPickedUp && Input.GetKeyDown(interactKey))
         {
             dialog.CloseDialogBox();
@@ -60,6 +63,18 @@ public class Interaction : MonoBehaviour
             player.IsInDialog(true);
             sidekick.NextDialog();
         }
+
+        // DIALOG ICON
+        if(friendlyInRange)
+        {
+            dialogIcon.transform.position = friendly.gameObject.transform.position + new Vector3(0f, 0.2f, 175.6206f);
+        }
+        else if (sidekickInRange)
+        {
+            dialogIcon.transform.position = sidekick.gameObject.transform.position + new Vector3(0f, 0.2f, 175.6206f);
+        }
+        else
+            Destroy(dialogIcon);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -73,11 +88,20 @@ public class Interaction : MonoBehaviour
         {
             friendly = collision.gameObject.GetComponent<Interactable>();
             friendlyInRange = true;
+            if (dialogIcon != null)
+                Destroy(dialogIcon);
+            dialogIcon = Instantiate(dialogIconPrototype);
         }
         else if (collision.gameObject.CompareTag("Sidekick"))
         {
             sidekick = collision.gameObject.GetComponent<Interactable>();
             sidekickInRange = true;
+            if (!friendlyInRange)
+            {
+                if (dialogIcon != null)
+                    Destroy(dialogIcon);
+                dialogIcon = Instantiate(dialogIconPrototype);
+            }
         }
     }
 

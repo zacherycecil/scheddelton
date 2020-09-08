@@ -116,6 +116,7 @@ public class Player : Character
 
     public void SetCurrentSidekick(Sidekick sidekick)
     {
+        sidekick.gameObject.transform.position = currentSidekick.gameObject.transform.position;
         currentSidekick = sidekick;
         foreach(Sidekick sk in sidekicks)
         {

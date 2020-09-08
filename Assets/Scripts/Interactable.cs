@@ -12,6 +12,8 @@ public class Interactable : Character
     {
         public Character character;
         public String str;
+        public Item item;
+        public bool itemReceived;
     };
 
     public DialogSystem dialog;
@@ -20,6 +22,7 @@ public class Interactable : Character
     public List<DialogObject> dialogList;
     public Image portraitObject;
     int counter;
+    public bool itemReceived;   
 
     void Start()
     {
@@ -28,27 +31,57 @@ public class Interactable : Character
 
     public void NextDialog()
     {
-        if(counter == dialogList.Count)
+        if (counter == dialogList.Count)
         {
-            counter = 0;
-            dialog.CloseDialogBox();
-            player.SetMovementLocked(false);
-            player.IsInDialog(false);
+            ResetNextDialog();
         }
         else
         {
-            dialog.ResetDialogString();
-            dialog.DisplayDialog(dialogList[counter].str);
-            portraitObject.sprite = dialogList[counter].character.characterPortrait;
-            counter++;
+            if (dialogList[counter].item == null)
+            {
+                dialog.ResetDialogString();
+                dialog.DisplayDialog(dialogList[counter].str);
+                portraitObject.sprite = dialogList[counter].character.characterPortrait;
+                counter++;
+
+            }
+            else
+            {
+                dialog.ResetDialogString();
+                if (!itemReceived)
+                {
+                    ReceiveItem(dialogList[counter].item);
+                    itemReceived = true;
+                    dialogList.RemoveAt(counter);
+                }
+                else
+                    counter++;
+            }
         }
+    }
+
+    public void ResetNextDialog()
+    {
+        counter = 0;
+        dialog.CloseDialogBox();
+        player.SetMovementLocked(false);
+        player.IsInDialog(false);
     }
 
     public void PickupItem(Item item)
     {
         dialog.DisplaySystemDialog(player.characterName + " has picked up the " + item.itemName + ".");
+        dialog.ResetDialogString();
         player.AddItem(item);
         menuSystem.LoadItemButtons(player.items);
         item.gameObject.SetActive(false);
+    }
+
+    public void ReceiveItem(Item item)
+    {
+        dialog.DisplaySystemDialog(player.characterName + " has received a " + item.itemName + ".");
+        dialog.ResetDialogString();
+        player.AddItem(item);
+        menuSystem.LoadItemButtons(player.items);
     }
 }
