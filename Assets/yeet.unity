@@ -10591,7 +10591,7 @@ MonoBehaviour:
   maxHealth: 0
   currentHealth: 0
   characterName: 
-  characterPortrait: {fileID: 21300000, guid: 0fb6d0aa75d6cab438846336036b12b2, type: 3}
+  characterPortrait: {fileID: 21300000, guid: 2c887485a1922ef4793907832d0abe15, type: 3}
   dialog: {fileID: 1677355829}
   player: {fileID: 1630424168}
   menuSystem: {fileID: 844056337}
