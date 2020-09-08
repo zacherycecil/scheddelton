@@ -29,6 +29,7 @@ public class Player : Character
     private PlayerMovement playerMovement;
 
     public bool isInDialog;
+    public bool isInMenu;
 
     public void IsInDialog(bool isInDialog)
     {
@@ -75,7 +76,7 @@ public class Player : Character
     // EXP
     public bool IncreaseExperience(int exp)
     {
-        return level.IncreaseExperience(exp);
+        return level.IncreaseExperience(exp, this);
     }
 
     public int GetLevel()

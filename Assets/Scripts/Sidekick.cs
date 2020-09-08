@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Sidekick : MonoBehaviour
+public class Sidekick : Character
 {
     public String sidekickName;
     public Player player;
@@ -28,7 +28,7 @@ public class Sidekick : MonoBehaviour
 
     public bool IncreaseExperience(int exp)
     {
-        return level.IncreaseExperience(exp);
+        return level.IncreaseExperience(exp, this);
     }
 
     // Start is called before the first frame update

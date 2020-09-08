@@ -46,9 +46,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Ground
+    uniqueID: 2570792321
+    locked: 0
+  - name: Shadow
+    uniqueID: 3934831831
+    locked: 0
   - name: Collision Layer
     uniqueID: 605443609
     locked: 0
   - name: Character
     uniqueID: 20111807
+    locked: 0
+  - name: Top
+    uniqueID: 1201524661
     locked: 0

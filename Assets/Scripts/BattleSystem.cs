@@ -47,6 +47,7 @@ public class BattleSystem : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Escape))
             {
                 menuSystem.ToggleOverworldMenu(player);
+                player.isInMenu = !player.isInMenu;
             }
         }
         // BATTLE LOGIC
