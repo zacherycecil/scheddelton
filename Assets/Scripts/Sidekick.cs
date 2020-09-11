@@ -49,7 +49,6 @@ public class Sidekick : Character
         if (myTransform.position.x == previousPosition.x && myTransform.position.y == previousPosition.y)
             moving = false;
         // X POSITION MOVING
-        UnityEngine.Debug.Log(myTransform.position.x + " " + previousPosition.x);
         if (Math.Abs(myTransform.position.x - previousPosition.x) > Math.Abs(myTransform.position.y - previousPosition.y))
         {
             y = 0;

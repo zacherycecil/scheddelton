@@ -11,7 +11,7 @@ public class Owl : Sidekick
     public override void MakeMove()
     {
         player.IncreaseStamina(staminaRecovery);
-        dialog.DisplayDialog(sidekickName + " has helped " + player.characterName + " recover stamina.\n" 
+        dialog.DisplaySystemDialog(sidekickName + " has helped " + player.characterName + " recover stamina.\n" 
             + staminaRecovery + " stamina recovered.");
     }
 }

@@ -149,4 +149,26 @@ public class Player : Character
         SetCurrentSidekick(currentSidekick);
         playerMovement = this.gameObject.GetComponent<PlayerMovement>();
     }
+
+    public IEnumerator HurtAnimation()
+    {
+        anim.SetTrigger("hurt");
+        yield return new WaitForSeconds(0.5f);
+        anim.SetTrigger("hurt");
+    }
+
+    // KEY/DOOR
+    public bool HasKey(DoorKey key)
+    {
+        bool found = false;
+        foreach (Item item in items)
+        {
+            if(item == key)
+            {
+                found = true;
+                break;
+            }
+        }
+        return found;
+    }
 }

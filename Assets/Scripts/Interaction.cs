@@ -7,8 +7,9 @@ public class Interaction : MonoBehaviour
 {
     public GameObject interactionBox;
     public Player player;
+    public BattleSystem battleSystem;
     public KeyCode interactKey;
-    public bool itemPickedUp;
+    public bool inDialog;
     public DialogSystem dialog;
     public GameObject dialogIcon;
     public GameObject dialogIconPrototype;
@@ -18,11 +19,13 @@ public class Interaction : MonoBehaviour
     public bool itemInRange;
     public bool friendlyInRange;
     public bool sidekickInRange;
+    public bool doorInRange;
 
     // interactables
     Interactable item;
     Interactable friendly;
     Interactable sidekick;
+    Door door;
 
     // Start is called before the first frame update
     void Start()
@@ -38,26 +41,42 @@ public class Interaction : MonoBehaviour
                 interactionBox.transform.position = new Vector2((0.25f * Input.GetAxisRaw("Horizontal")) - 0.25f + player.transform.position.x, 0.25f * Input.GetAxisRaw("Vertical") + player.transform.position.y);
 
         // INTERACTION
-        if (player.isInMenu)
+        if (player.isInMenu || battleSystem.inBattle)
         {
             if(dialogIcon!= null)
                 dialogIcon.SetActive(false);
         }
         else
         {
-            if (itemPickedUp && Input.GetKeyDown(interactKey))
+            if (inDialog && Input.GetKeyDown(interactKey))
             {
                 dialog.CloseDialogBox();
                 player.SetMovementLocked(false);
                 player.IsInDialog(false);
-                itemPickedUp = false;
+                inDialog = false;
             }
             else if (itemInRange && Input.GetKeyDown(interactKey))
             {
                 player.SetMovementLocked(true);
                 player.IsInDialog(true);
                 item.PickupItem(item.gameObject.GetComponent<Item>());
-                itemPickedUp = true;
+                inDialog = true;
+            }
+            else if (doorInRange && Input.GetKeyDown(interactKey))
+            {
+                player.SetMovementLocked(true);
+                player.IsInDialog(true);
+                inDialog = true;
+                if (player.HasKey(door.GetKeyToOpen()))
+                {
+                    door.GetKeyToOpen().Use();
+                    door.OpenDoor();
+                    dialog.DisplaySystemDialog(door.GetKeyToOpen().actionString);
+                }
+                else
+                {
+                    dialog.DisplaySystemDialog("The door is locked. " + player.characterName + " checks his pockets but he does not have the key.");
+                }
             }
             else if (friendlyInRange && Input.GetKeyDown(interactKey))
             {
@@ -96,6 +115,11 @@ public class Interaction : MonoBehaviour
             item = collision.gameObject.GetComponent<Interactable>();
             itemInRange = true;
         }
+        else if (collision.gameObject.CompareTag("Door"))
+        {
+            door = collision.gameObject.GetComponent<Door>();
+            doorInRange = true;
+        }
         else if (collision.gameObject.CompareTag("Friendly"))
         {
             friendly = collision.gameObject.GetComponent<Interactable>();
@@ -130,6 +154,10 @@ public class Interaction : MonoBehaviour
         else if (collision.gameObject.CompareTag("Sidekick"))
         {
             sidekickInRange = false;
+        }
+        else if (collision.gameObject.CompareTag("Door"))
+        {
+            doorInRange = false;
         }
     }
 }

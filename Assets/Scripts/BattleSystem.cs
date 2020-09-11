@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public enum BattleState { NOT_IN_BATTLE, START, PLAYER_TURN, ENEMY_TURN, SIDEKICK_TURN, RECOVER_STAMINA, PLAYER_LEVEL_UP, SIDEKICK_LEVEL_UP, WON1, WON2, WON3, LOST, WAITING }
+public enum BattleState { NOT_IN_BATTLE, START, PLAYER_TURN, ENEMY_TURN, SIDEKICK_TURN, RECOVER_STAMINA, ENEMY_ITEM_DROP, PLAYER_LEVEL_UP, SIDEKICK_LEVEL_UP, WON1, WON2, WON3, LOST, WAITING }
 
 public class BattleSystem : MonoBehaviour
 {
@@ -120,10 +120,24 @@ public class BattleSystem : MonoBehaviour
                 menuSystem.HideBattleHUDs();
                 StartCoroutine(BattleDelay(3));
                 dialog.ResetDialogString();
+                // ITEM DROP
+                if (enemy.HasDroppedItem())
+                {
+                    enemy.DropItem();
+                    state = BattleState.ENEMY_ITEM_DROP;
+                }
+                else
+                    state = BattleState.WON2;
+            }
+            else if (state == BattleState.ENEMY_ITEM_DROP)
+            {
+                dialog.DisplaySystemDialog(enemy.characterName + " dropped a " + enemy.GetDroppedItem().itemName + ".");
+                dialog.ResetDialogString();
+                StartCoroutine(BattleDelay(1.5f));
                 state = BattleState.WON2;
             }
             else if (state == BattleState.WON2)
-            { 
+            {
                 if (player.IncreaseExperience(enemy.experienceWorth))
                 {
                     dialog.DisplaySystemDialog("Level up! Choose a trait to increase it's level.");
@@ -187,6 +201,8 @@ public class BattleSystem : MonoBehaviour
             attackDialog += "\nGlancing blow! ";
             damage = attack.glancingBlowDamage;
         }
+        enemy.AttackAnimation(attack.attackName.ToLower());
+        StartCoroutine(player.HurtAnimation());
         dialog.DisplaySystemDialog(attackDialog + attack.attackName + " deals " + (int)damage + " damage to " + player.characterName + ".");
         player.currentHealth = player.currentHealth - (int)damage;
         dialog.ResetDialogString();
@@ -214,7 +230,10 @@ public class BattleSystem : MonoBehaviour
             damage = damage * (1 + (player.elementalControlLevel * 0.50f));
         if (attack.physical)
             damage = damage * (1 + (player.physicalStrengthLevel * 0.50f));
+        // ANIMATION
         player.AttackAnimation(attack.attackName.ToLower());
+        StartCoroutine(enemy.HurtAnimation());
+
         dialog.DisplaySystemDialog(attackDialog + attack.attackName + " deals " + (int)damage + " damage to " + enemy.characterName + ".");
         enemy.currentHealth = enemy.currentHealth - (int)damage;
         dialog.ResetDialogString();

@@ -33,7 +33,7 @@ public class Interactable : Character
     {
         if (counter == dialogList.Count)
         {
-            ResetNextDialog();
+            ResetDialog();
         }
         else
         {
@@ -60,7 +60,7 @@ public class Interactable : Character
         }
     }
 
-    public void ResetNextDialog()
+    public void ResetDialog()
     {
         counter = 0;
         dialog.CloseDialogBox();

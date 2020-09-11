@@ -39,21 +39,35 @@ public class ItemButtonBehaviour : ButtonBehaviour, IPointerEnterHandler, IPoint
 
     public void ConfirmUseItem()
     {
-        if (stamina.UseStamina(item.itemCost))
+        if (battleSystem.inBattle)
+        {
+            if (stamina.UseStamina(item.itemCost))
+            {
+                item.Use();
+                menuSystem.ItemButtonsEnabled(true);
+                menuSystem.ItemConfirmationActive(false);
+                menuSystem.LoadItemButtons(player.items);
+                dialog.DisplaySystemDialog(item.itemName + " has been used.");
+                dialog.DisplaySystemDialog(item.actionString);
+                dialog.ResetDialogString();
+                menuSystem.GoToMainBattleMenu();
+            }
+            else
+            {
+                dialog.DisplaySystemDialog("Not enough stamina for this action!");
+                dialog.ResetDialogString();
+            }
+        }
+        else
         {
             item.Use();
             menuSystem.ItemButtonsEnabled(true);
             menuSystem.ItemConfirmationActive(false);
             menuSystem.LoadItemButtons(player.items);
             dialog.DisplaySystemDialog(item.itemName + " has been used.");
-            dialog.DisplaySystemDialog(item.actionString);
             dialog.ResetDialogString();
-            menuSystem.GoToMainBattleMenu();
-        }
-        else
-        {
-            dialog.DisplaySystemDialog("Not enough stamina for this action!");
-            dialog.ResetDialogString();
+            menuSystem.ReturnToMain();
+
         }
     }
 

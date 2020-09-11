@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,6 +10,8 @@ public class Enemy : Character
     public List<Attack> attacks;
     public Animator anim;
     System.Random rnd = new System.Random();
+    public Animator animator;
+    public Item droppedItem;
 
     // MOVEMENT VARIABLES
     public float moveSpeed;
@@ -32,11 +35,50 @@ public class Enemy : Character
         else if (Vector3.Distance(target.position, transform.position) <= chaseRadius && !inBattle)
         {
             moving = true;
-            transform.position = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
-            x = (transform.position - target.position).x;
+            if(!bs.inBattle)
+                transform.position = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
+            if ((transform.position - target.position).x > 0)
+                x = 1;
+            else if ((transform.position - target.position).x < 0)
+                x = -1;
         }
         else
             moving = false;
+    }
+
+    public bool HasDroppedItem()
+    {
+        return droppedItem != null;
+    }
+
+    public Item GetDroppedItem()
+    {
+        return droppedItem;
+    }
+
+    public void DropItem()
+    {
+        droppedItem.gameObject.SetActive(true);
+        droppedItem.gameObject.transform.position = this.gameObject.transform.position + new Vector3(0f, 0f, 175.6206f);
+    }
+
+    public void AttackAnimation(String triggerName)
+    {
+        StartCoroutine(AnimationDelay(triggerName));
+    }
+
+    IEnumerator AnimationDelay(String triggerName)
+    {
+        animator.SetTrigger(triggerName);
+        yield return new WaitForSeconds(0.1f);
+        animator.SetTrigger(triggerName);
+    }
+
+    public IEnumerator HurtAnimation()
+    {
+        animator.SetTrigger("hurt");
+        yield return new WaitForSeconds(0.1f);
+        animator.SetTrigger("hurt");
     }
 
     public Attack GetAttack()
