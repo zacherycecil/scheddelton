@@ -43,7 +43,6 @@ public class Interactable : Character
                 dialog.DisplayDialog(dialogList[counter].str);
                 portraitObject.sprite = dialogList[counter].character.characterPortrait;
                 counter++;
-
             }
             else
             {

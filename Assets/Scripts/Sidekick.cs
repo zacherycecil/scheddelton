@@ -77,8 +77,6 @@ public class Sidekick : Character
             anim.SetFloat("y", y);
         }
         anim.SetBool("moving", moving);
-        if (myTransform.position.x != previousPosition.x)
-            UnityEngine.Debug.Log((x + " " + y));
         previousPosition = myTransform.position;
     }
 

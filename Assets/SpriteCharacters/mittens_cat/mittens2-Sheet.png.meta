@@ -1,0 +1,932 @@
+fileFormatVersion: 2
+guid: 37f0cd766a0a94b4aba4f886b0716fa1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -354978446187258142
+    second: mittens2-Sheet_0
+  - first:
+      213: 258048471808740300
+    second: mittens2-Sheet_1
+  - first:
+      213: -134763072891445210
+    second: mittens2-Sheet_2
+  - first:
+      213: -8105134871745890583
+    second: mittens2-Sheet_3
+  - first:
+      213: 1039438338566908026
+    second: mittens2-Sheet_4
+  - first:
+      213: -240511986547292964
+    second: mittens2-Sheet_5
+  - first:
+      213: 7230718151197795771
+    second: mittens2-Sheet_6
+  - first:
+      213: -6320835710596020937
+    second: mittens2-Sheet_7
+  - first:
+      213: -8114803082817745492
+    second: mittens2-Sheet_8
+  - first:
+      213: 976671859314244254
+    second: mittens2-Sheet_9
+  - first:
+      213: -35288791789424085
+    second: mittens2-Sheet_10
+  - first:
+      213: -699563028282126284
+    second: mittens2-Sheet_11
+  - first:
+      213: -9064071885149531145
+    second: mittens2-Sheet_12
+  - first:
+      213: -7264167004985702223
+    second: mittens2-Sheet_13
+  - first:
+      213: -1875114731944347711
+    second: mittens2-Sheet_14
+  - first:
+      213: 1113057932925621920
+    second: mittens2-Sheet_15
+  - first:
+      213: 3611450677364862032
+    second: mittens2-Sheet_16
+  - first:
+      213: -3767193509781493288
+    second: mittens2-Sheet_17
+  - first:
+      213: -4385089664158849953
+    second: mittens2-Sheet_18
+  - first:
+      213: -290774177886719138
+    second: mittens2-Sheet_19
+  - first:
+      213: 2891874236730883041
+    second: mittens2-Sheet_20
+  - first:
+      213: 1479606860772091465
+    second: mittens2-Sheet_21
+  - first:
+      213: -8649846919903557362
+    second: mittens2-Sheet_22
+  - first:
+      213: 6359328170831274517
+    second: mittens2-Sheet_23
+  - first:
+      213: 6257545784329427563
+    second: mittens2-Sheet_24
+  - first:
+      213: -7924864145356794755
+    second: mittens2-Sheet_25
+  - first:
+      213: -85085787502804051
+    second: mittens2-Sheet_26
+  - first:
+      213: 7068269444515360410
+    second: mittens2-Sheet_27
+  - first:
+      213: -5557067011987977488
+    second: mittens2-Sheet_28
+  - first:
+      213: 3267920765459208457
+    second: mittens2-Sheet_29
+  - first:
+      213: 9030513483917099720
+    second: mittens2-Sheet_30
+  - first:
+      213: -6292664290711893683
+    second: mittens2-Sheet_31
+  - first:
+      213: 7923283108515804737
+    second: mittens2-Sheet_32
+  - first:
+      213: -8135593089772478777
+    second: mittens2-Sheet_33
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: mittens2-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1056
+        width: 36
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ee9614ebfcd21bf0800000000000000
+      internalID: -354978446187258142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mittens2-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 36
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccb0ef8c7b5c49300800000000000000
+      internalID: 258048471808740300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mittens2-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 992
+        width: 36
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 620277ff2b9312ef0800000000000000
+      internalID: -134763072891445210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mittens2-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 960
+        width: 36
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e674f8e6c6c48f80800000000000000
+      internalID: -8105134871745890583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mittens2-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 928
+        width: 36
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a78e33869a3dc6e00800000000000000
+      internalID: 1039438338566908026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mittens2-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 896
+        width: 36
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd400ad5f9789acf0800000000000000
+      internalID: -240511986547292964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mittens2-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 864
+        width: 36
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb52d1939dba85460800000000000000
+      internalID: 7230718151197795771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mittens2-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 832
+        width: 36
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73502521961e748a0800000000000000
+      internalID: -6320835710596020937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mittens2-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 800
+        width: 36
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cad476a179d626f80800000000000000
+      internalID: -8114803082817745492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mittens2-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 36
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9abb84a1e5dd8d00800000000000000
+      internalID: 976671859314244254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mittens2-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 736
+        width: 36
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b22b6d4e701a28ff0800000000000000
+      internalID: -35288791789424085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mittens2-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 704
+        width: 36
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4305f39d127aa46f0800000000000000
+      internalID: -699563028282126284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mittens2-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 672
+        width: 36
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f39e0bd4a2f53280800000000000000
+      internalID: -9064071885149531145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mittens2-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 640
+        width: 36
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b8c6be989e703b90800000000000000
+      internalID: -7264167004985702223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mittens2-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 608
+        width: 36
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c7fa5906114af5e0800000000000000
+      internalID: -1875114731944347711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mittens2-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 576
+        width: 36
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a65672fa40627f00800000000000000
+      internalID: 1113057932925621920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mittens2-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 544
+        width: 36
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05c2d2cb1437e1230800000000000000
+      internalID: 3611450677364862032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mittens2-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 36
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d92159567d38bbc0800000000000000
+      internalID: -3767193509781493288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mittens2-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 480
+        width: 36
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5423930f280523c0800000000000000
+      internalID: -4385089664158849953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mittens2-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 448
+        width: 36
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e53b4310d66f6fbf0800000000000000
+      internalID: -290774177886719138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mittens2-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 416
+        width: 36
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ebb277eb40022820800000000000000
+      internalID: 2891874236730883041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mittens2-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 36
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9462d8fb99e988410800000000000000
+      internalID: 1479606860772091465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mittens2-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 352
+        width: 36
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0944a12e0295f780800000000000000
+      internalID: -8649846919903557362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mittens2-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 36
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5126888374fd04850800000000000000
+      internalID: 6359328170831274517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mittens2-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 288
+        width: 36
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6ad2b8acb447d650800000000000000
+      internalID: 6257545784329427563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mittens2-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 36
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7457ca2c0a350290800000000000000
+      internalID: -7924864145356794755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mittens2-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 224
+        width: 36
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da306745de6b1def0800000000000000
+      internalID: -85085787502804051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mittens2-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 36
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9ee5194c99871260800000000000000
+      internalID: 7068269444515360410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mittens2-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 36
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fa4a65cef451e2b0800000000000000
+      internalID: -5557067011987977488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mittens2-Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 36
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 909915b3f9cf95d20800000000000000
+      internalID: 3267920765459208457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mittens2-Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 36
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c2014cfa24d25d70800000000000000
+      internalID: 9030513483917099720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mittens2-Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 36
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d490555ea27fba8a0800000000000000
+      internalID: -6292664290711893683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mittens2-Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 36
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 146ffe1020825fd60800000000000000
+      internalID: 7923283108515804737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mittens2-Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 36
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ce1df66031981f80800000000000000
+      internalID: -8135593089772478777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

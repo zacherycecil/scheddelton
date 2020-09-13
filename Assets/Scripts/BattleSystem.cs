@@ -189,8 +189,14 @@ public class BattleSystem : MonoBehaviour
     {
         String attackDialog = enemy.characterName + " uses " + attack.attackName + ".";
         float damage;
+        // CRITICAL
+        if (player.DetrimentalGambleCheck())
+        {
+            attackDialog += "\nFate has paid you a visit! Critical hit!\n";
+            damage = attack.baseDamage * (1.5f);
+        }
         // DIRECT HIT
-        if (attack.AccuracyCheck())
+        else if (attack.AccuracyCheck())
         {
             attackDialog += "\n";
             damage = attack.baseDamage;
@@ -202,7 +208,7 @@ public class BattleSystem : MonoBehaviour
             damage = attack.glancingBlowDamage;
         }
         enemy.AttackAnimation(attack.attackName.ToLower());
-        StartCoroutine(player.HurtAnimation());
+        player.HurtAnimation();
         dialog.DisplaySystemDialog(attackDialog + attack.attackName + " deals " + (int)damage + " damage to " + player.characterName + ".");
         player.currentHealth = player.currentHealth - (int)damage;
         dialog.ResetDialogString();
@@ -213,8 +219,14 @@ public class BattleSystem : MonoBehaviour
     {
         String attackDialog = player.characterName + " uses " + attack.attackName + ".";
         float damage;
+        // CRITICAL
+        if (player.BeneficialGambleCheck())
+        {
+            attackDialog += "\nFate has paid you a visit! Critical hit!\n";
+            damage = attack.baseDamage * (1 + player.gambleLevel * 0.2f);
+        }
         // DIRECT HIT
-        if (attack.AccuracyCheck())
+        else if (attack.AccuracyCheck())
         {
             attackDialog += "\n";
             damage = attack.baseDamage;
@@ -227,12 +239,12 @@ public class BattleSystem : MonoBehaviour
         }
         // ELEMENTAL / PHYSICAL
         if (attack.elemental)
-            damage = damage * (1 + (player.elementalControlLevel * 0.50f));
+            damage = damage * (1 + (player.elementalControlLevel * 0.30f));
         if (attack.physical)
-            damage = damage * (1 + (player.physicalStrengthLevel * 0.50f));
+            damage = damage * (1 + (player.physicalStrengthLevel * 0.30f));
         // ANIMATION
         player.AttackAnimation(attack.attackName.ToLower());
-        StartCoroutine(enemy.HurtAnimation());
+        enemy.HurtAnimation();
 
         dialog.DisplaySystemDialog(attackDialog + attack.attackName + " deals " + (int)damage + " damage to " + enemy.characterName + ".");
         enemy.currentHealth = enemy.currentHealth - (int)damage;

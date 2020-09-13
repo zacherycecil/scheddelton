@@ -64,21 +64,12 @@ public class Enemy : Character
 
     public void AttackAnimation(String triggerName)
     {
-        StartCoroutine(AnimationDelay(triggerName));
-    }
-
-    IEnumerator AnimationDelay(String triggerName)
-    {
-        animator.SetTrigger(triggerName);
-        yield return new WaitForSeconds(0.1f);
         animator.SetTrigger(triggerName);
     }
 
-    public IEnumerator HurtAnimation()
+    public void HurtAnimation()
     {
-        animator.SetTrigger("hurt");
-        yield return new WaitForSeconds(0.1f);
-        animator.SetTrigger("hurt");
+        anim.SetTrigger("hurt");
     }
 
     public Attack GetAttack()
