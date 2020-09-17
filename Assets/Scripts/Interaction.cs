@@ -9,7 +9,6 @@ public class Interaction : MonoBehaviour
     public Player player;
     public BattleSystem battleSystem;
     public KeyCode interactKey;
-    public bool inDialog;
     public DialogSystem dialog;
     public GameObject dialogIcon;
     public GameObject dialogIconPrototype;
@@ -46,49 +45,33 @@ public class Interaction : MonoBehaviour
             if(dialogIcon!= null)
                 dialogIcon.SetActive(false);
         }
-        else
+        else if(!player.isInDialog)
         {
-            if (inDialog && Input.GetKeyDown(interactKey))
+            if (itemInRange && Input.GetKeyDown(interactKey))
             {
-                dialog.CloseDialogBox();
-                player.SetMovementLocked(false);
-                player.IsInDialog(false);
-                inDialog = false;
-            }
-            else if (itemInRange && Input.GetKeyDown(interactKey))
-            {
-                player.SetMovementLocked(true);
-                player.IsInDialog(true);
                 item.PickupItem(item.gameObject.GetComponent<Item>());
-                inDialog = true;
             }
             else if (doorInRange && Input.GetKeyDown(interactKey))
             {
-                player.SetMovementLocked(true);
-                player.IsInDialog(true);
-                inDialog = true;
+                player.isInDialog = true;
                 if (player.HasKey(door.GetKeyToOpen()))
                 {
                     door.GetKeyToOpen().Use();
                     door.OpenDoor();
-                    dialog.DisplaySystemDialog(door.GetKeyToOpen().actionString);
+                    dialog.SystemDialogBuffer(door.GetKeyToOpen().actionString);
                 }
                 else
                 {
-                    dialog.DisplaySystemDialog("The door is locked. " + player.characterName + " checks his pockets but he does not have the key.");
+                    dialog.SystemDialogBuffer("The door is locked. " + player.characterName + " checks his pockets but he does not have the key.");
                 }
             }
             else if (friendlyInRange && Input.GetKeyDown(interactKey))
             {
-                player.SetMovementLocked(true);
-                player.IsInDialog(true);
-                friendly.NextDialog();
+                friendly.AddDialogToBuffer();
             }
             else if (sidekickInRange && Input.GetKeyDown(interactKey))
             {
-                player.SetMovementLocked(true);
-                player.IsInDialog(true);
-                sidekick.NextDialog();
+                sidekick.AddDialogToBuffer();
             }
 
             if(dialogIcon!=null)

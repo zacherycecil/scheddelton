@@ -32,6 +32,14 @@ public class Player : Character
     public bool isInDialog;
     public bool isInMenu;
 
+    void Update()
+    {
+        if(isInDialog || isInMenu)
+            SetMovementLocked(true);
+        else
+            SetMovementLocked(false);
+    }
+
     public void IsInDialog(bool isInDialog)
     {
         this.isInDialog = isInDialog;
@@ -88,11 +96,11 @@ public class Player : Character
     // EXP
     public bool IncreaseExperience(int exp)
     {
-        bool leveledUp = level.IncreaseExperience(exp, this);
+        bool leveledUp = level.IncreaseExperience(exp);
         if(leveledUp)
         {
-            currentHealth += level.currentLevel * 5;
-            maxHealth += level.currentLevel * 10;
+            currentHealth += level.currentLevel * 3;
+            maxHealth += level.currentLevel * 3;
         }
         return leveledUp;
     }
@@ -129,6 +137,11 @@ public class Player : Character
     public void SetWeapon(Weapon weapon)
     {
         currentWeapon = weapon;
+    }
+
+    public List<Attack> GetUnlockedAttacks()
+    {
+        return currentWeapon.attackList.GetRange(0, currentWeapon.level.currentLevel + 1);
     }
 
     //SIDEKICK

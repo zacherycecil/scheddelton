@@ -3,9 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 using TMPro;
 
-public enum BattleState { NOT_IN_BATTLE, START, PLAYER_TURN, ENEMY_TURN, SIDEKICK_TURN, RECOVER_STAMINA, ENEMY_ITEM_DROP, PLAYER_LEVEL_UP, SIDEKICK_LEVEL_UP, WON1, WON2, WON3, LOST, WAITING }
+public enum BattleState { NOT_IN_BATTLE, START, PLAYER_TURN, ENEMY_TURN, SIDEKICK_TURN, RECOVER_STAMINA, PLAYER_LEVEL_UP, SIDEKICK_LEVEL_UP, WON, TEARDOWN, LOST, WAITING }
 
 public class BattleSystem : MonoBehaviour
 {
@@ -13,7 +14,6 @@ public class BattleSystem : MonoBehaviour
     public MenuSystem menuSystem;
 
     // DIALOG BOX
-    public bool delaying;
     public DialogSystem dialog;
 
     // CHARACTERS
@@ -21,11 +21,13 @@ public class BattleSystem : MonoBehaviour
     Enemy enemy;
 
     // OTHER FIGHT ELEMENTS
-    public GameObject fightText;
+    public Animator fightText;
     public AudioSource gong;
     public AudioSource punch;
     public BattleState state;
     public bool inBattle;
+    public UnityEvent showLevelUpMenu;
+    public UnityEvent enemyDie;
 
     // Start is called before the first frame update
     void Start()
@@ -51,128 +53,116 @@ public class BattleSystem : MonoBehaviour
             }
         }
         // BATTLE LOGIC
-        if (!delaying)
+        if(player.isInDialog)
+            menuSystem.ButtonsEnabled(false);
+        else
+            menuSystem.ButtonsEnabled(true);
+
+        // STATE START
+        if (state == BattleState.START)
         {
-            // STATE START
-            if (state == BattleState.START)
+            // reset player stamina
+            player.ResetStamina();
+
+            // enter battle dialog
+            dialog.ResetDialogString();
+            dialog.BattleDialogBuffer(enemy.characterName + " wants to fight!");
+            dialog.ResetDialogString();
+
+            // set up battle HUD and menus
+            menuSystem.InitializeMenu();
+            menuSystem.LoadBattleHUDs(player, enemy);
+            menuSystem.LoadWeaponButtons(player.weapons);
+            menuSystem.LoadAttackButtons(player.GetUnlockedAttacks());
+
+            // show FIGHT text
+            fightText.SetTrigger("fight text");
+            gong.Play();
+
+            state = BattleState.WAITING;
+            inBattle = true;
+        }
+        // STATE ENEMY TURN
+        else if (state == BattleState.ENEMY_TURN)
+        {
+            menuSystem.ButtonsEnabled(false);
+            EnemyDoAttack(enemy.GetAttack());
+            state = BattleState.SIDEKICK_TURN;
+        }
+        // STATE SIDEKICK TURN
+        else if (state == BattleState.SIDEKICK_TURN)
+        {
+            player.currentSidekick.MakeMove();
+        }
+        // STATE STAMINA RECOVERY
+        else if (state == BattleState.RECOVER_STAMINA)
+        {
+            player.RecoverStamina();
+            dialog.BattleDialogBuffer(player.characterName + " has recovered " + player.staminaRecovery + " stamina.", 0.5f);
+
+            state = BattleState.PLAYER_TURN;
+        }
+        // STATE PLAYER TURN
+        else if (state == BattleState.PLAYER_TURN)
+        {
+            menuSystem.ButtonsEnabled(true);
+            state = BattleState.WAITING;
+        }
+        else if (state == BattleState.WON)
+        {
+            // VICTORY DIALOG
+            dialog.SpecialDialogBuffer(player.characterName + " has defeated " + enemy.characterName + "!\n" + player.characterName + " receives " + enemy.goldWorth + " gold coins. \n" +
+                player.characterName + " and " + player.currentSidekick.sidekickName + " receive " + enemy.experienceWorth + " experience.", true, enemyDie);
+
+            if (enemy.HasDroppedItem())
             {
-                // reset player stamina
-                player.ResetStamina();
+                dialog.SystemDialogBuffer(enemy.characterName + " dropped a " + enemy.GetDroppedItem().itemName + ".");
+            }
 
-                // show FIGHT text
-                StartCoroutine(FightTextShow(fightText, 2.0f));
-                gong.Play();
-
-                // enter battle dialog
-                dialog.ResetDialogString();
-                dialog.DisplaySystemDialog(enemy.characterName + " wants to fight!");
-                dialog.ResetDialogString();
-
-                // set up battle HUD and menus
-                menuSystem.InitializeMenu();
-                menuSystem.LoadBattleHUDs(player, enemy);
-                menuSystem.LoadWeaponButtons(player.weapons);
-                menuSystem.LoadAttackButtons(player.currentWeapon.attackList);
-
+            if (player.IncreaseExperience(enemy.experienceWorth))
+            {
+                dialog.SpecialDialogBuffer("Level up! Choose a trait to increase it's level.\n", 0, showLevelUpMenu);
                 state = BattleState.WAITING;
-                inBattle = true;
             }
-            // STATE ENEMY TURN
-            else if (state == BattleState.ENEMY_TURN)
+            else if (player.currentSidekick.IncreaseExperience(enemy.experienceWorth))
             {
-                menuSystem.ButtonsEnabled(false);
-                EnemyDoAttack(enemy.GetAttack());
-                state = BattleState.SIDEKICK_TURN;
+                state = BattleState.SIDEKICK_LEVEL_UP;
             }
-            // STATE SIDEKICK TURN
-            else if (state == BattleState.SIDEKICK_TURN)
+            else
             {
-                player.currentSidekick.MakeMove();
-                if (enemy.currentHealth <= 0)
-                    state = BattleState.WON1;
-                else
-                    state = BattleState.RECOVER_STAMINA;
-            }
-            // STATE STAMINA RECOVERY
-            else if (state == BattleState.RECOVER_STAMINA)
-            {
-                player.RecoverStamina();
-                // PRINT INFO
-                dialog.DisplaySystemDialog(player.characterName + " has recovered " + player.staminaRecovery + " stamina.");
-                dialog.ResetDialogString();
-
-                state = BattleState.PLAYER_TURN;
-            }
-            // STATE PLAYER TURN
-            else if (state == BattleState.PLAYER_TURN)
-            {
-                menuSystem.ButtonsEnabled(true);
-                state = BattleState.WAITING;
-            }
-            else if (state == BattleState.WON1)
-            {
-                menuSystem.ButtonsEnabled(false);
-                enemy.gameObject.SetActive(false);
-                inBattle = false;
-                // VICTORY DIALOG
-                dialog.DisplaySystemDialog(player.characterName + " has defeated " + enemy.characterName + "!\n" + player.characterName + " receives " + enemy.goldWorth + " gold coins.");
-                dialog.DisplaySystemDialog(player.characterName + " and " + player.currentSidekick.sidekickName + " receive " + enemy.experienceWorth + " experience.");
-                menuSystem.HideBattleHUDs();
-                StartCoroutine(BattleDelay(3));
-                dialog.ResetDialogString();
-                // ITEM DROP
-                if (enemy.HasDroppedItem())
-                {
-                    enemy.DropItem();
-                    state = BattleState.ENEMY_ITEM_DROP;
-                }
-                else
-                    state = BattleState.WON2;
-            }
-            else if (state == BattleState.ENEMY_ITEM_DROP)
-            {
-                dialog.DisplaySystemDialog(enemy.characterName + " dropped a " + enemy.GetDroppedItem().itemName + ".");
-                dialog.ResetDialogString();
-                StartCoroutine(BattleDelay(1.5f));
-                state = BattleState.WON2;
-            }
-            else if (state == BattleState.WON2)
-            {
-                if (player.IncreaseExperience(enemy.experienceWorth))
-                {
-                    dialog.DisplaySystemDialog("Level up! Choose a trait to increase it's level.");
-                    menuSystem.GoToLevelUpMenu();
-                    menuSystem.HideBattleHUDs();
-                    state = BattleState.WAITING;
-                }
-                else if (player.currentSidekick.IncreaseExperience(enemy.experienceWorth))
-                {
-                    state = BattleState.SIDEKICK_LEVEL_UP;
-                }
-                else
-                {
-                    state = BattleState.WON3;
-                }
-            }
-            else if (state == BattleState.PLAYER_LEVEL_UP)
-            {
-                if (player.currentSidekick.IncreaseExperience(enemy.experienceWorth))
-                {
-                    state = BattleState.SIDEKICK_LEVEL_UP;
-                }
-            }
-            else if (state == BattleState.SIDEKICK_LEVEL_UP)
-            {
-                state = BattleState.WON3;
-            }
-            else if (state == BattleState.WON3)
-            {
-                menuSystem.CloseMenus();
-                player.SetMovementLocked(false);
-                dialog.CloseDialogBox();
                 state = BattleState.NOT_IN_BATTLE;
             }
         }
+        else if (state == BattleState.PLAYER_LEVEL_UP)
+        {
+            if (player.currentSidekick.IncreaseExperience(enemy.experienceWorth))
+            {
+                state = BattleState.SIDEKICK_LEVEL_UP;
+            }
+            else
+                state = BattleState.NOT_IN_BATTLE;
+        }
+        else if (state == BattleState.SIDEKICK_LEVEL_UP)
+        {
+            state = BattleState.NOT_IN_BATTLE;
+        }
+        else if (state == BattleState.TEARDOWN)
+        {
+            state = BattleState.NOT_IN_BATTLE;
+        }
+    }
+
+    public void DefeatEnemy()
+    {
+        menuSystem.CloseMenus();
+        //enemy.gameObject.SetActive(false);
+        inBattle = false;
+        player.isInMenu = true;
+        //dialog.CloseDialogBox();
+        enemy.gameObject.SetActive(false);
+        menuSystem.HideBattleHUDs();
+        if (enemy.HasDroppedItem()) 
+            enemy.DropItem();
     }
 
     public void SetEnemy(Enemy enemy)
@@ -209,10 +199,8 @@ public class BattleSystem : MonoBehaviour
         }
         enemy.AttackAnimation(attack.attackName.ToLower());
         player.HurtAnimation();
-        dialog.DisplaySystemDialog(attackDialog + attack.attackName + " deals " + (int)damage + " damage to " + player.characterName + ".");
+        dialog.BattleDialogBuffer(attackDialog + attack.attackName + " deals " + (int)damage + " damage to " + player.characterName + ".", 2);
         player.currentHealth = player.currentHealth - (int)damage;
-        dialog.ResetDialogString();
-        StartCoroutine(BattleDelay(3));
     }
 
     public void PlayerDoAttack(Attack attack)
@@ -239,40 +227,36 @@ public class BattleSystem : MonoBehaviour
         }
         // ELEMENTAL / PHYSICAL
         if (attack.elemental)
-            damage = damage * (1 + (player.elementalControlLevel * 0.30f));
+            damage = damage * (1 + (player.elementalControlLevel * 0.10f));
         if (attack.physical)
-            damage = damage * (1 + (player.physicalStrengthLevel * 0.30f));
+            damage = damage * (1 + (player.physicalStrengthLevel * 0.10f));
+        // WEAPON LEVEL MULTIPLIER
+        damage = damage * player.currentWeapon.GetDamageMultiplier();
         // ANIMATION
         player.AttackAnimation(attack.attackName.ToLower());
         enemy.HurtAnimation();
-
-        dialog.DisplaySystemDialog(attackDialog + attack.attackName + " deals " + (int)damage + " damage to " + enemy.characterName + ".");
         enemy.currentHealth = enemy.currentHealth - (int)damage;
-        dialog.ResetDialogString();
+
+
         if (enemy.currentHealth <= 0)
         {
-            state = BattleState.WON1;
+            dialog.BattleDialogBuffer(attackDialog + attack.attackName + " deals " + (int)damage + " damage to " + enemy.characterName + ".", 2);
+            state = BattleState.WON;
             menuSystem.ButtonsEnabled(false);
-            StartCoroutine(BattleDelay(2));
+        }
+        else
+            dialog.BattleDialogBuffer(attackDialog + attack.attackName + " deals " + (int)damage + " damage to " + enemy.characterName + ".");
+        // WEAPON EXP
+        if (player.currentWeapon.level.IncreaseExperience((int)damage))
+        {
+            String weaponLevelUpString = player.currentWeapon.weaponName + " is now level " + player.currentWeapon.level.currentLevel + "! ";
+            weaponLevelUpString += "\n" + player.currentWeapon.attackList[player.currentWeapon.level.currentLevel] + " attack unlocked!";
+            dialog.SystemDialogBuffer(weaponLevelUpString);
         }
     }
 
     public Player GetPlayer()
     {
         return player;
-    }
-
-    public IEnumerator BattleDelay(float time)
-    {
-        delaying = true;
-        yield return new WaitForSeconds(time);
-        delaying = false;
-    }
-
-    IEnumerator FightTextShow(GameObject go, float delay)
-    {
-        go.SetActive(true);
-        yield return new WaitForSeconds(delay);
-        go.SetActive(false);
     }
 }

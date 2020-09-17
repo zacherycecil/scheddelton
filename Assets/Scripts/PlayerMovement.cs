@@ -82,20 +82,4 @@ public class PlayerMovement : MonoBehaviour
     {
         return change != Vector3.zero;
     }
-
-    public void LockMovement()
-    {
-        lockedMovement = true;
-    }
-
-    public void UnlockMovement()
-    {
-        lockedMovement = false;
-    }
-
-    public void SetIdleAnimation()
-    {
-        animator.SetBool("moving", false);
-        animator.SetBool("inBattle", false);
-    }
 }

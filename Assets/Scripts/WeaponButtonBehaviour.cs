@@ -35,7 +35,7 @@ public class WeaponButtonBehaviour : ButtonBehaviour, IPointerEnterHandler, IPoi
             }
             else if (stamina.UseStamina(weapon.switchCost))
             {
-                menuSystem.LoadAttackButtons(weapon.attackList);
+                menuSystem.LoadAttackButtons(player.GetUnlockedAttacks());
                 menuSystem.GoToMainBattleMenu();
                 menuSystem.SetWeaponIcon(weapon);
                 menuSystem.ReturnToMain();

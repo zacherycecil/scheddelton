@@ -6,6 +6,7 @@ using UnityEngine;
 public class Sidekick : Character
 {
     public String sidekickName;
+    public BattleSystem battleSystem;
     public Player player;
     public LevelSystem level;
     public float switchCost;
@@ -28,7 +29,7 @@ public class Sidekick : Character
 
     public bool IncreaseExperience(int exp)
     {
-        return level.IncreaseExperience(exp, this);
+        return level.IncreaseExperience(exp);
     }
 
     // Start is called before the first frame update

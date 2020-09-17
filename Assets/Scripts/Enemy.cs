@@ -12,6 +12,7 @@ public class Enemy : Character
     System.Random rnd = new System.Random();
     public Animator animator;
     public Item droppedItem;
+    public Player player;
 
     // MOVEMENT VARIABLES
     public float moveSpeed;
@@ -35,7 +36,7 @@ public class Enemy : Character
         else if (Vector3.Distance(target.position, transform.position) <= chaseRadius && !inBattle)
         {
             moving = true;
-            if(!bs.inBattle)
+            if(!bs.inBattle && !player.isInMenu && !player.isInDialog)
                 transform.position = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
             if ((transform.position - target.position).x > 0)
                 x = 1;
