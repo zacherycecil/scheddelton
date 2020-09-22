@@ -57,6 +57,11 @@ public class Enemy : Character
         return droppedItem;
     }
 
+    public void ReduceHealth(int damage)
+    {
+        currentHealth -= damage;
+    }
+
     public void DropItem()
     {
         droppedItem.gameObject.SetActive(true);

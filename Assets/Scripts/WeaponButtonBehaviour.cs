@@ -22,7 +22,7 @@ public class WeaponButtonBehaviour : ButtonBehaviour, IPointerEnterHandler, IPoi
         if (battleSystem.state == BattleState.NOT_IN_BATTLE && player.currentWeapon != weapon)
         {
             player.SetWeapon(weapon);
-            menuSystem.LoadAttackButtons(weapon.attackList);
+            menuSystem.LoadAttackButtons(player.GetUnlockedAttacks());
             menuSystem.SetWeaponIcon(weapon);
             menuSystem.ReturnToMain();
         }
@@ -31,20 +31,19 @@ public class WeaponButtonBehaviour : ButtonBehaviour, IPointerEnterHandler, IPoi
             if (player.currentWeapon == weapon)
             {
                 dialog.DisplaySystemDialog("This weapon is already being used.");
-                dialog.ResetDialogString();
             }
             else if (stamina.UseStamina(weapon.switchCost))
             {
+                dialog.BattleDialogBuffer(player.characterName + " switched to " + weapon.weaponName + ".", 0);
+                player.SetWeapon(weapon);
                 menuSystem.LoadAttackButtons(player.GetUnlockedAttacks());
-                menuSystem.GoToMainBattleMenu();
                 menuSystem.SetWeaponIcon(weapon);
                 menuSystem.ReturnToMain();
                 menuSystem.LoadWeaponButtons(player.weapons);
             }
             else
             {
-                dialog.DisplaySystemDialog("Not enough stamina for this action!");
-                dialog.ResetDialogString();
+                dialog.BattleDialogBuffer("Not enough stamina for this action!", 0);
             }
         }
     }

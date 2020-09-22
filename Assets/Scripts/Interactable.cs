@@ -27,6 +27,8 @@ public class Interactable : Character
         {
             dialog.CharacterDialogBuffer(dialogObject.str, dialogObject.character, dialogObject.item);
         }
+        // SET DIALOG TARGET FOR CAMERA
+        dialog.currentDialogTarget = this.gameObject;
 
         // DELETE ONE-TIME DIALOG
         List<DialogObject> toDelete = new List<DialogObject>();

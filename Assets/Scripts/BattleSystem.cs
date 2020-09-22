@@ -64,6 +64,9 @@ public class BattleSystem : MonoBehaviour
             // reset player stamina
             player.ResetStamina();
 
+            // enemy camera set
+            dialog.currentDialogTarget = enemy.gameObject;
+
             // enter battle dialog
             dialog.ResetDialogString();
             dialog.BattleDialogBuffer(enemy.characterName + " wants to fight!");
@@ -77,7 +80,7 @@ public class BattleSystem : MonoBehaviour
 
             // show FIGHT text
             fightText.SetTrigger("fight text");
-            gong.Play();
+            //gong.Play();
 
             state = BattleState.WAITING;
             inBattle = true;
@@ -250,8 +253,9 @@ public class BattleSystem : MonoBehaviour
         if (player.currentWeapon.level.IncreaseExperience((int)damage))
         {
             String weaponLevelUpString = player.currentWeapon.weaponName + " is now level " + player.currentWeapon.level.currentLevel + "! ";
-            weaponLevelUpString += "\n" + player.currentWeapon.attackList[player.currentWeapon.level.currentLevel] + " attack unlocked!";
-            dialog.SystemDialogBuffer(weaponLevelUpString);
+            weaponLevelUpString += "\n" + player.currentWeapon.attackList[player.currentWeapon.level.currentLevel].attackName + " attack unlocked!";
+            dialog.BattleDialogBuffer(weaponLevelUpString, 2);
+            menuSystem.LoadAttackButtons(player.GetUnlockedAttacks());
         }
     }
 

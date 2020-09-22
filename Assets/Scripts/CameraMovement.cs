@@ -6,11 +6,14 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
-    public Transform target;
+    public Player player;
+    Transform target;
     public float smoothing;
     public Vector2 maxPosition;
     public Vector2 minPosition;
-
+    public BattleSystem battleSystem;
+    public Interaction interaction;
+    public DialogSystem dialog;
 
     // Start is called before the first frame update
     void Start()
@@ -21,15 +24,33 @@ public class CameraMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(transform.position != target.position)
+        if (!battleSystem.inBattle && !player.isInDialog)
+            dialog.currentDialogTarget = null;
+
+        if(dialog.currentDialogTarget == null)
         {
-            Vector3 targetPosition = new Vector3(target.position.x, target.position.y, transform.position.z);
+            if (transform.position != player.gameObject.transform.position)
+            {
+                Vector3 targetPosition = new Vector3(player.gameObject.transform.position.x, player.gameObject.transform.position.y, transform.position.z);
 
-            targetPosition.x = Mathf.Clamp(targetPosition.x, minPosition.x, maxPosition.x);
-            targetPosition.y = Mathf.Clamp(targetPosition.y, minPosition.y, maxPosition.y);
+                targetPosition.x = Mathf.Clamp(targetPosition.x, minPosition.x, maxPosition.x);
+                targetPosition.y = Mathf.Clamp(targetPosition.y, minPosition.y, maxPosition.y);
 
-            transform.position = Vector3.Lerp(transform.position, targetPosition, smoothing);
+                transform.position = Vector3.Lerp(transform.position, targetPosition, smoothing);
+            }
+        }
+        else
+        {
+            target = dialog.currentDialogTarget.transform;
+            if (transform.position != (target.position - player.gameObject.transform.position)/2)
+            {
+                Vector3 targetPosition = new Vector3((target.position + player.gameObject.transform.position).x/2, (target.position + player.gameObject.transform.position).y/2, transform.position.z);
 
+                targetPosition.x = Mathf.Clamp(targetPosition.x, minPosition.x, maxPosition.x);
+                targetPosition.y = Mathf.Clamp(targetPosition.y, minPosition.y, maxPosition.y);
+
+                transform.position = Vector3.Lerp(transform.position, targetPosition, smoothing);
+            }
         }
     }
 }

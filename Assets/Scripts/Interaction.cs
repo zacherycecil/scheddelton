@@ -12,7 +12,6 @@ public class Interaction : MonoBehaviour
     public DialogSystem dialog;
     public GameObject dialogIcon;
     public GameObject dialogIconPrototype;
-    public GameObject currentInteractable;
 
     // bools
     public bool itemInRange;
@@ -22,8 +21,8 @@ public class Interaction : MonoBehaviour
 
     // interactables
     Interactable item;
-    Interactable friendly;
-    Interactable sidekick;
+    public Interactable friendly;
+    public Interactable sidekick;
     Door door;
 
     // Start is called before the first frame update
@@ -35,17 +34,19 @@ public class Interaction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!player.GetMovementLocked()) // check if player movement is locked
+        if (!player.GetMovementLocked()) // check if player movement is locked
+        {
             if ((Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)) // check if 
                 interactionBox.transform.position = new Vector2((0.25f * Input.GetAxisRaw("Horizontal")) - 0.25f + player.transform.position.x, 0.25f * Input.GetAxisRaw("Vertical") + player.transform.position.y);
+        }
 
         // INTERACTION
-        if (player.isInMenu || battleSystem.inBattle)
+        if (battleSystem.inBattle)
         {
             if(dialogIcon!= null)
                 dialogIcon.SetActive(false);
         }
-        else if(!player.isInDialog)
+        else if(!player.GetMovementLocked())    
         {
             if (itemInRange && Input.GetKeyDown(interactKey))
             {
@@ -53,7 +54,6 @@ public class Interaction : MonoBehaviour
             }
             else if (doorInRange && Input.GetKeyDown(interactKey))
             {
-                player.isInDialog = true;
                 if (player.HasKey(door.GetKeyToOpen()))
                 {
                     door.GetKeyToOpen().Use();

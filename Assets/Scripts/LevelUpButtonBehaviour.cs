@@ -10,13 +10,11 @@ public class LevelUpButtonBehaviour : ButtonBehaviour, IPointerEnterHandler, IPo
 
     public void OnPointerEnter(PointerEventData pointerEventData)
     {
-        dialog.ResetDialogString();
         dialog.BattleDialogBuffer("Level up! Choose a trait to increase it's level.\n" + traitDescription, 0);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        dialog.ResetDialogString();
         dialog.BattleDialogBuffer("Level up! Choose a trait to increase it's level.\n", 0);
     }
 

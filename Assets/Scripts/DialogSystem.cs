@@ -32,7 +32,8 @@ public class DialogSystem : MonoBehaviour
     public List<DialogObject> dialogStringBuffer;
     public GameObject readyIndicator;
     public bool needsCleared;
-
+    public bool dialogBoxOpen;
+    public GameObject currentDialogTarget;
 
     // UTILITY
     public void ResetDialogString()
@@ -59,7 +60,7 @@ public class DialogSystem : MonoBehaviour
     public void CloseDialogBox()
     {
         dialogBox.SetActive(false);
-        ResetDialogString();
+        dialogBoxOpen = false;
     }
 
     public bool IsBufferEmpty()
@@ -119,12 +120,20 @@ public class DialogSystem : MonoBehaviour
     // UPDATE
     void Update()
     {
+        if (dialogBoxOpen)
+            player.SetMovementLocked(true);
+        else
+            player.SetMovementLocked(false);
+
         // HAPPENS ONCE IF BUFFER NOT EMPTY
         if (dialogStringBuffer.Count != 0 && !player.isInDialog && !player.isInMenu)
         {
+            dialogBoxOpen = true;
             player.isInDialog = true;
+            player.isInMenu = true;
             readyForNext = true;
             DisplayNextInBuffer(dialogStringBuffer[0]);
+            needsCleared = false;
         }
 
         // IF IN DIALOG
@@ -157,6 +166,9 @@ public class DialogSystem : MonoBehaviour
             else // NOT READY FOR NEXT
                 readyIndicator.SetActive(false);
         }
+
+        if(!player.isInDialog && !player.isInMenu && !battleSystem.inBattle)
+            currentDialogTarget = null;
     }
 
     // HANDLES THE BUFFER OBJECT
