@@ -6,6 +6,7 @@ using UnityEngine;
 public class Sidekick : Character
 {
     public String sidekickName;
+    public BattleSystem battleSystem;
     public Player player;
     public LevelSystem level;
     public float switchCost;
@@ -28,7 +29,7 @@ public class Sidekick : Character
 
     public bool IncreaseExperience(int exp)
     {
-        return level.IncreaseExperience(exp, this);
+        return level.IncreaseExperience(exp);
     }
 
     // Start is called before the first frame update
@@ -49,7 +50,6 @@ public class Sidekick : Character
         if (myTransform.position.x == previousPosition.x && myTransform.position.y == previousPosition.y)
             moving = false;
         // X POSITION MOVING
-        UnityEngine.Debug.Log(myTransform.position.x + " " + previousPosition.x);
         if (Math.Abs(myTransform.position.x - previousPosition.x) > Math.Abs(myTransform.position.y - previousPosition.y))
         {
             y = 0;
@@ -78,8 +78,6 @@ public class Sidekick : Character
             anim.SetFloat("y", y);
         }
         anim.SetBool("moving", moving);
-        if (myTransform.position.x != previousPosition.x)
-            UnityEngine.Debug.Log((x + " " + y));
         previousPosition = myTransform.position;
     }
 

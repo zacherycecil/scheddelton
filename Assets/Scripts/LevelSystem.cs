@@ -11,14 +11,13 @@ public class LevelSystem : MonoBehaviour
     public List<int> levelUpExperience;
     public GameObject levelUpSparklePrototype;
 
-    public bool IncreaseExperience(int exp, Character character)
+    public bool IncreaseExperience(int exp)
     {
         currentExperience += exp;
         if (currentExperience >= levelUpExperience[currentLevel+1])
         {
             // LEVEL UP
             currentLevel++;
-            StartCoroutine(LevelUpSparkle(character));
             return true;
         }
         else
@@ -29,6 +28,11 @@ public class LevelSystem : MonoBehaviour
     {
         // return percent til next level
         return (int)(100 * ((float)(currentExperience - levelUpExperience[currentLevel]) / (float)(levelUpExperience[currentLevel+1] - levelUpExperience[currentLevel])));
+    }
+
+    public void Sparkle(Character character)
+    {
+        StartCoroutine(LevelUpSparkle(character));
     }
 
     public IEnumerator LevelUpSparkle(Character character)

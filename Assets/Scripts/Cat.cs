@@ -2,13 +2,16 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Cat : Sidekick
-{
-    public BattleSystem battleSystem;
+{   
     public DialogSystem dialog;
+    public MenuSystem menuSystem;
     public List<Attack> attacks;
     System.Random rnd = new System.Random();
+    public UnityEvent reduceEnemyHealth;
+    int savedDamage;
 
     public Attack GetAttack()
     {
@@ -33,9 +36,23 @@ public class Cat : Sidekick
             damage = attack.glancingBlowDamage;
         }
         Enemy enemy = battleSystem.GetEnemy();
-        dialog.DisplaySystemDialog(attackDialog + attack.attackName + " deals " + (int)damage + " damage to " + enemy.characterName + ".");
-        enemy.currentHealth = enemy.currentHealth - (int)damage;
-        dialog.ResetDialogString();
-        StartCoroutine(battleSystem.BattleDelay(3));
+        if (enemy.currentHealth - damage <= 0)
+        {
+            dialog.SpecialDialogBuffer(attackDialog + attack.attackName + " deals " + (int)damage + " damage to " + enemy.characterName + ".", reduceEnemyHealth);
+            battleSystem.state = BattleState.WON;
+            menuSystem.ButtonsEnabled(false);
+        }
+        else
+        {
+            dialog.SpecialDialogBuffer(attackDialog + attack.attackName + " deals " + (int)damage + " damage to " + enemy.characterName + ".", reduceEnemyHealth);
+            battleSystem.state = BattleState.RECOVER_STAMINA;
+        }
+        savedDamage = (int)damage;
+    }
+
+    public void DoDamage()
+    {
+        Enemy enemy = battleSystem.GetEnemy();
+        enemy.currentHealth -= (int)savedDamage;
     }
 }

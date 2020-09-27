@@ -1,0 +1,1211 @@
+fileFormatVersion: 2
+guid: 997aa23a74e6bd145a3d9155857c695e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3501283894709514695
+    second: scheddelton_aseprite-Sheet2_0
+  - first:
+      213: 7373088865663737133
+    second: scheddelton_aseprite-Sheet2_1
+  - first:
+      213: -5571884058863525546
+    second: scheddelton_aseprite-Sheet2_2
+  - first:
+      213: 5579525914308389902
+    second: scheddelton_aseprite-Sheet2_3
+  - first:
+      213: 2554986512993791120
+    second: scheddelton_aseprite-Sheet2_4
+  - first:
+      213: 1425688728039539429
+    second: scheddelton_aseprite-Sheet2_5
+  - first:
+      213: -6083567445239672901
+    second: scheddelton_aseprite-Sheet2_6
+  - first:
+      213: -4871930763948805380
+    second: scheddelton_aseprite-Sheet2_7
+  - first:
+      213: -761878298140405707
+    second: scheddelton_aseprite-Sheet2_8
+  - first:
+      213: -1701032628281986172
+    second: scheddelton_aseprite-Sheet2_9
+  - first:
+      213: -3350428533950619838
+    second: scheddelton_aseprite-Sheet2_10
+  - first:
+      213: -7054537470298735216
+    second: scheddelton_aseprite-Sheet2_11
+  - first:
+      213: 7281674812627603941
+    second: scheddelton_aseprite-Sheet2_12
+  - first:
+      213: 1294730678958533454
+    second: scheddelton_aseprite-Sheet2_13
+  - first:
+      213: 4657639807405919193
+    second: scheddelton_aseprite-Sheet2_14
+  - first:
+      213: -2284823405022472120
+    second: scheddelton_aseprite-Sheet2_15
+  - first:
+      213: -6343506934525703576
+    second: scheddelton_aseprite-Sheet2_16
+  - first:
+      213: 1567502131661406592
+    second: scheddelton_aseprite-Sheet2_17
+  - first:
+      213: -727268471542704629
+    second: scheddelton_aseprite-Sheet2_18
+  - first:
+      213: 8437469478808723919
+    second: scheddelton_aseprite-Sheet2_19
+  - first:
+      213: 4368743501372093029
+    second: scheddelton_aseprite-Sheet2_20
+  - first:
+      213: -8003543794911818872
+    second: scheddelton_aseprite-Sheet2_21
+  - first:
+      213: -2298453549301827807
+    second: scheddelton_aseprite-Sheet2_22
+  - first:
+      213: 3862100089299284913
+    second: scheddelton_aseprite-Sheet2_23
+  - first:
+      213: -8053441521067235351
+    second: scheddelton_aseprite-Sheet2_24
+  - first:
+      213: 2480827973966179168
+    second: scheddelton_aseprite-Sheet2_25
+  - first:
+      213: 5214979921287639189
+    second: scheddelton_aseprite-Sheet2_26
+  - first:
+      213: -6314017083923161865
+    second: scheddelton_aseprite-Sheet2_27
+  - first:
+      213: -6103147288844860908
+    second: scheddelton_aseprite-Sheet2_28
+  - first:
+      213: 8648572606887609242
+    second: scheddelton_aseprite-Sheet2_29
+  - first:
+      213: 2232534889899390975
+    second: scheddelton_aseprite-Sheet2_30
+  - first:
+      213: -1067607019704330630
+    second: scheddelton_aseprite-Sheet2_31
+  - first:
+      213: 4379807027698790278
+    second: scheddelton_aseprite-Sheet2_32
+  - first:
+      213: -1609562583992527295
+    second: scheddelton_aseprite-Sheet2_33
+  - first:
+      213: -5558294469772286788
+    second: scheddelton_aseprite-Sheet2_34
+  - first:
+      213: -4914789675131957168
+    second: scheddelton_aseprite-Sheet2_35
+  - first:
+      213: -6436026310339292951
+    second: scheddelton_aseprite-Sheet2_36
+  - first:
+      213: 4685182163984618806
+    second: scheddelton_aseprite-Sheet2_0
+  - first:
+      213: 3664403417254283208
+    second: scheddelton_aseprite-Sheet2_1
+  - first:
+      213: -1986632954951953401
+    second: scheddelton_aseprite-Sheet2_2
+  - first:
+      213: 9015965826446929819
+    second: scheddelton_aseprite-Sheet2_3
+  - first:
+      213: -1704152101892479625
+    second: scheddelton_aseprite-Sheet2_4
+  - first:
+      213: -7146347474980786067
+    second: scheddelton_aseprite-Sheet2_5
+  - first:
+      213: -1764538126073667449
+    second: scheddelton_aseprite-Sheet2_6
+  - first:
+      213: 5278475961464520323
+    second: scheddelton_aseprite-Sheet2_7
+  - first:
+      213: -2312600196433642241
+    second: scheddelton_aseprite-Sheet2_8
+  - first:
+      213: 1595322895199787376
+    second: scheddelton_aseprite-Sheet2_9
+  - first:
+      213: -4210271109586553346
+    second: scheddelton_aseprite-Sheet2_10
+  - first:
+      213: -981975397972413975
+    second: scheddelton_aseprite-Sheet2_11
+  - first:
+      213: 4566282005672498873
+    second: scheddelton_aseprite-Sheet2_12
+  - first:
+      213: 4648022197115452779
+    second: scheddelton_aseprite-Sheet2_13
+  - first:
+      213: 7325777192938790194
+    second: scheddelton_aseprite-Sheet2_14
+  - first:
+      213: 1932623959046361983
+    second: scheddelton_aseprite-Sheet2_15
+  - first:
+      213: -1304314041098159902
+    second: scheddelton_aseprite-Sheet2_16
+  - first:
+      213: 3438159218558300026
+    second: scheddelton_aseprite-Sheet2_17
+  - first:
+      213: 6526141791310259907
+    second: scheddelton_aseprite-Sheet2_18
+  - first:
+      213: 430648043261633166
+    second: scheddelton_aseprite-Sheet2_19
+  - first:
+      213: 6436015557280603322
+    second: scheddelton_aseprite-Sheet2_20
+  - first:
+      213: -5880942578026054793
+    second: scheddelton_aseprite-Sheet2_21
+  - first:
+      213: -2793229673785575723
+    second: scheddelton_aseprite-Sheet2_22
+  - first:
+      213: -2206738463155621286
+    second: scheddelton_aseprite-Sheet2_23
+  - first:
+      213: 548927584317867139
+    second: scheddelton_aseprite-Sheet2_24
+  - first:
+      213: 4154363289428705817
+    second: scheddelton_aseprite-Sheet2_25
+  - first:
+      213: -5530026982229799463
+    second: scheddelton_aseprite-Sheet2_26
+  - first:
+      213: -4372817427861105732
+    second: scheddelton_aseprite-Sheet2_27
+  - first:
+      213: -5661128098012767844
+    second: scheddelton_aseprite-Sheet2_28
+  - first:
+      213: 1370926845022039210
+    second: scheddelton_aseprite-Sheet2_29
+  - first:
+      213: 6210461049205100071
+    second: scheddelton_aseprite-Sheet2_30
+  - first:
+      213: -5043968177906712414
+    second: scheddelton_aseprite-Sheet2_31
+  - first:
+      213: -5367096426154504384
+    second: scheddelton_aseprite-Sheet2_32
+  - first:
+      213: -2036671495040272355
+    second: scheddelton_aseprite-Sheet2_33
+  - first:
+      213: -2229027490221418250
+    second: scheddelton_aseprite-Sheet2_34
+  - first:
+      213: -5370086503558305814
+    second: scheddelton_aseprite-Sheet2_35
+  - first:
+      213: -4785735297962958162
+    second: scheddelton_aseprite-Sheet2_36
+  - first:
+      213: 7751765160736366329
+    second: scheddelton_aseprite-Sheet2_37
+  - first:
+      213: 5586147570366119910
+    second: scheddelton_aseprite-Sheet2_38
+  - first:
+      213: -3287642770771256768
+    second: scheddelton_aseprite-Sheet2_39
+  - first:
+      213: -1493325696696405266
+    second: scheddelton_aseprite-Sheet2_40
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6359c40ea5c150140800000000000000
+      internalID: 4685182163984618806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet2_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c74b2f3e739ad230800000000000000
+      internalID: 3664403417254283208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet2_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70411056adf0e64e0800000000000000
+      internalID: -1986632954951953401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet2_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9f2e6886252f1d70800000000000000
+      internalID: 9015965826446929819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet2_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 775a67b31b2a958e0800000000000000
+      internalID: -1704152101892479625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet2_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d60b240a5d213dc90800000000000000
+      internalID: -7146347474980786067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet2_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 780eeba5ce91387e0800000000000000
+      internalID: -1764538126073667449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet2_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38ef78e9be9e04940800000000000000
+      internalID: 5278475961464520323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet2_8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffcf210cf5ef7efd0800000000000000
+      internalID: -2312600196433642241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet2_9
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0795e6688b9b32610800000000000000
+      internalID: 1595322895199787376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet2_10
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef5f0099bbc1295c0800000000000000
+      internalID: -4210271109586553346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet2_11
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e17ea904925f52f0800000000000000
+      internalID: -981975397972413975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet2_12
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b61e5c7a41be5f30800000000000000
+      internalID: 4566282005672498873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet2_13
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6d723fdf87118040800000000000000
+      internalID: 4648022197115452779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet2_14
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23d56c81b836aa560800000000000000
+      internalID: 7325777192938790194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet2_15
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f731e53504f02da10800000000000000
+      internalID: 1932623959046361983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet2_16
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e83ac84a4526ede0800000000000000
+      internalID: -1304314041098159902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet2_17
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7fe667d79bc6bf20800000000000000
+      internalID: 3438159218558300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet2_18
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c621e8d163819a50800000000000000
+      internalID: 6526141791310259907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet2_19
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e82a3d91d18f9f500800000000000000
+      internalID: 430648043261633166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet2_20
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abc1994cc02515950800000000000000
+      internalID: 6436015557280603322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet2_21
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77b794442e1b26ea0800000000000000
+      internalID: -5880942578026054793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet2_22
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d63eed29647c39d0800000000000000
+      internalID: -2793229673785575723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet2_23
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a52fa6f3f071061e0800000000000000
+      internalID: -2206738463155621286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet2_24
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3840ea6cabe2e9700800000000000000
+      internalID: 548927584317867139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet2_25
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9124256a66347a930800000000000000
+      internalID: 4154363289428705817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet2_26
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dd0edd42c56143b0800000000000000
+      internalID: -5530026982229799463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet2_27
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb393b0b7b1a053c0800000000000000
+      internalID: -4372817427861105732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet2_28
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9957f12df1af61b0800000000000000
+      internalID: -5661128098012767844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet2_29
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aace59ab3b2860310800000000000000
+      internalID: 1370926845022039210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet2_30
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72e05497b6dff2650800000000000000
+      internalID: 6210461049205100071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet2_31
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a00f719aa9300ab0800000000000000
+      internalID: -5043968177906712414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet2_32
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04fcacb8c3e3485b0800000000000000
+      internalID: -5367096426154504384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet2_33
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d18f5f5e01a4cb3e0800000000000000
+      internalID: -2036671495040272355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet2_34
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f895cabe47e011e0800000000000000
+      internalID: -2229027490221418250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet2_35
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae7a946e6ce9975b0800000000000000
+      internalID: -5370086503558305814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet2_36
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea2aed73a17a59db0800000000000000
+      internalID: -4785735297962958162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet2_37
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fe90f3d75dc39b60800000000000000
+      internalID: 7751765160736366329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet2_38
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ef759a5e9bf58d40800000000000000
+      internalID: 5586147570366119910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet2_39
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04a5cc39152ff52d0800000000000000
+      internalID: -3287642770771256768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheddelton_aseprite-Sheet2_40
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee2b27ad034a64be0800000000000000
+      internalID: -1493325696696405266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

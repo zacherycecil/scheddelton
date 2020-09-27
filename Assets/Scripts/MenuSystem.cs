@@ -73,7 +73,6 @@ public class MenuSystem : MonoBehaviour
         {
             battleUI.SetActive(false);
             dialoxBox.SetActive(false);
-            UnityEngine.Debug.Log("1");
             player.SetMovementLocked(false);
         }
         else
@@ -82,7 +81,6 @@ public class MenuSystem : MonoBehaviour
             GoToOverworldMenu();
             LoadPlayerBattleHUD(player);
             dialoxBox.SetActive(false);
-            UnityEngine.Debug.Log("2");
             player.SetMovementLocked(true);
         }
     }

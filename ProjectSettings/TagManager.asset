@@ -9,6 +9,7 @@ TagManager:
   - Friendly
   - Sidekick
   - Item
+  - Door
   layers:
   - Default
   - TransparentFX

@@ -14,6 +14,7 @@ public class Player : Character
     public Animator anim;
 
     public float staminaRecovery;
+    System.Random rnd = new System.Random();
 
     public LevelSystem level;
     public List<Sidekick> sidekicks;
@@ -24,21 +25,40 @@ public class Player : Character
     public int physicalStrengthLevel;
     public int cunningLevel;
     public int elementalControlLevel;
-    public int gambleLevel;
+    public int gambleLevel; 
 
     private PlayerMovement playerMovement;
 
     public bool isInDialog;
     public bool isInMenu;
 
+    void Update()
+    {
+        if(isInDialog || isInMenu)
+            SetMovementLocked(true);
+        else
+            SetMovementLocked(false);
+    }
+
     public void IsInDialog(bool isInDialog)
     {
         this.isInDialog = isInDialog;
     }
 
+    // ATTACK
     public void AttackAnimation(String triggerName)
     {
-        this.gameObject.GetComponent<PlayerMovement>().AttackAnimation(triggerName);
+        anim.SetTrigger(triggerName);
+    }
+
+    public bool BeneficialGambleCheck()
+    {
+        return rnd.Next(100) <= 2 * gambleLevel;
+    }
+
+    public bool DetrimentalGambleCheck()
+    {
+        return rnd.Next(100) <= gambleLevel;
     }
 
     // ITEM
@@ -76,7 +96,13 @@ public class Player : Character
     // EXP
     public bool IncreaseExperience(int exp)
     {
-        return level.IncreaseExperience(exp, this);
+        bool leveledUp = level.IncreaseExperience(exp);
+        if(leveledUp)
+        {
+            currentHealth += level.currentLevel * 3;
+            maxHealth += level.currentLevel * 3;
+        }
+        return leveledUp;
     }
 
     public int GetLevel()
@@ -111,6 +137,11 @@ public class Player : Character
     public void SetWeapon(Weapon weapon)
     {
         currentWeapon = weapon;
+    }
+
+    public List<Attack> GetUnlockedAttacks()
+    {
+        return currentWeapon.attackList.GetRange(0, currentWeapon.level.currentLevel + 1);
     }
 
     //SIDEKICK
@@ -148,5 +179,25 @@ public class Player : Character
     {
         SetCurrentSidekick(currentSidekick);
         playerMovement = this.gameObject.GetComponent<PlayerMovement>();
+    }
+
+    public void HurtAnimation()
+    {
+        anim.SetTrigger("hurt");
+    }
+
+    // KEY/DOOR
+    public bool HasKey(DoorKey key)
+    {
+        bool found = false;
+        foreach (Item item in items)
+        {
+            if(item == key)
+            {
+                found = true;
+                break;
+            }
+        }
+        return found;
     }
 }

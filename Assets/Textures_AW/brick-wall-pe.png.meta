@@ -44,6 +44,54 @@ TextureImporter:
   - first:
       213: 9105110251426099820
     second: brick-wall-pe_13
+  - first:
+      213: -4484624255654257750
+    second: brick-wall-pe_0
+  - first:
+      213: -4589919528201008933
+    second: brick-wall-pe_1
+  - first:
+      213: 6230033334565489599
+    second: brick-wall-pe_2
+  - first:
+      213: 9108240240164741825
+    second: brick-wall-pe_3
+  - first:
+      213: -6951300274121421556
+    second: brick-wall-pe_4
+  - first:
+      213: -4038481832027170029
+    second: brick-wall-pe_5
+  - first:
+      213: -6228882453095096651
+    second: brick-wall-pe_6
+  - first:
+      213: 1665940598060906364
+    second: brick-wall-pe_7
+  - first:
+      213: -2309536613128909825
+    second: brick-wall-pe_8
+  - first:
+      213: 1314490301405006629
+    second: brick-wall-pe_9
+  - first:
+      213: 373187251625339660
+    second: brick-wall-pe_10
+  - first:
+      213: -2072148135181678824
+    second: brick-wall-pe_11
+  - first:
+      213: 6058708923131829780
+    second: brick-wall-pe_12
+  - first:
+      213: 1858063948080526956
+    second: brick-wall-pe_13
+  - first:
+      213: -8308152476272430827
+    second: brick-wall-pe_14
+  - first:
+      213: -7531843090614007416
+    second: brick-wall-pe_15
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -155,8 +203,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14667733bba2aeec0800000000000000
-      internalID: -3536967573835389375
+      spriteID: aab90a2000a63c1c0800000000000000
+      internalID: -4484624255654257750
       vertices: []
       indices: 
       edges: []
@@ -176,8 +224,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2618796679a2dfbf0800000000000000
-      internalID: -289027971332210334
+      spriteID: bd843fde1845d40c0800000000000000
+      internalID: -4589919528201008933
       vertices: []
       indices: 
       edges: []
@@ -197,8 +245,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c97f26e3b9357ffd0800000000000000
-      internalID: -2308284357772380260
+      spriteID: fbb4e954f46857650800000000000000
+      internalID: 6230033334565489599
       vertices: []
       indices: 
       edges: []
@@ -218,8 +266,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fbf8b45376da81670800000000000000
-      internalID: 8509742154703933375
+      spriteID: 1c220fbad38f66e70800000000000000
+      internalID: 9108240240164741825
       vertices: []
       indices: 
       edges: []
@@ -239,8 +287,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5df451dd5abac570800000000000000
-      internalID: 8487801359839853919
+      spriteID: c0dcae1fa35088f90800000000000000
+      internalID: -6951300274121421556
       vertices: []
       indices: 
       edges: []
@@ -260,8 +308,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2b1aba0db1183750800000000000000
-      internalID: 6284792783621987115
+      spriteID: 31bd62aab2e64f7c0800000000000000
+      internalID: -4038481832027170029
       vertices: []
       indices: 
       edges: []
@@ -281,8 +329,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e680cae6bfede52e0800000000000000
-      internalID: -2135024001852110738
+      spriteID: 5be5a9339609e89a0800000000000000
+      internalID: -6228882453095096651
       vertices: []
       indices: 
       edges: []
@@ -302,8 +350,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d804043f0edf13a0800000000000000
-      internalID: -6692386364370712368
+      spriteID: c77725cb52c9e1710800000000000000
+      internalID: 1665940598060906364
       vertices: []
       indices: 
       edges: []
@@ -323,8 +371,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e4293c03924d0ac00800000000000000
-      internalID: 909960398105711182
+      spriteID: ffb41b2dfa0e2ffd0800000000000000
+      internalID: -2309536613128909825
       vertices: []
       indices: 
       edges: []
@@ -344,8 +392,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 61d7869890bb1d000800000000000000
-      internalID: 59033919766953238
+      spriteID: 52b01f3f6f10e3210800000000000000
+      internalID: 1314490301405006629
       vertices: []
       indices: 
       edges: []
@@ -365,8 +413,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b8234e69df6752b0800000000000000
-      internalID: -5595881032336070473
+      spriteID: c0b25dff3d3dd2500800000000000000
+      internalID: 373187251625339660
       vertices: []
       indices: 
       edges: []
@@ -386,8 +434,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a4527dbc0d398360800000000000000
-      internalID: 7172331006491514025
+      spriteID: 8170280ff304e33e0800000000000000
+      internalID: -2072148135181678824
       vertices: []
       indices: 
       edges: []
@@ -407,8 +455,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2906006e487ec8db0800000000000000
-      internalID: -4788197745821196142
+      spriteID: 41e13c84aabd41450800000000000000
+      internalID: 6058708923131829780
       vertices: []
       indices: 
       edges: []
@@ -428,8 +476,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c6235016889db5e70800000000000000
-      internalID: 9105110251426099820
+      spriteID: c66bc4bf05b29c910800000000000000
+      internalID: 1858063948080526956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-wall-pe_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 511ffff575383bc80800000000000000
+      internalID: -8308152476272430827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-wall-pe_15
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 889c8ff4d94897790800000000000000
+      internalID: -7531843090614007416
       vertices: []
       indices: 
       edges: []
