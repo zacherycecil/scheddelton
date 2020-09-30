@@ -22,3 +22,11 @@ The following packages were added:
   com.unity.test-framework@1.1.14
 The following packages were updated:
   com.unity.timeline from version 1.2.14 to 1.2.15
+
+=== Thu Sep 24 09:05:37 2020
+
+Packages were changed.
+Update Mode: updateDependencies
+
+The following packages were updated:
+  com.unity.test-framework from version 1.1.14 to 1.1.16

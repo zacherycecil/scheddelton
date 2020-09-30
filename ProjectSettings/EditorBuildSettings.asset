@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/yeet.unity
     guid: 08314ec2e8d76ed4d9355371465b459f
+  - enabled: 1
+    path: Assets/prisonUpstairs.unity
+    guid: 2f0178c6e463f2a4190be0192b155216
   m_configObjects: {}

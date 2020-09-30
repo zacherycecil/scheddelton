@@ -4,25 +4,50 @@ using UnityEngine;
 
 public class SoundsManager : MonoBehaviour
 {
-    public BattleSystem battleSystem;
-    public AudioSource battleMusic;
+    public AudioSource audioSource;
 
-    // Start is called before the first frame update
-    void Start()
+    // MUSIC
+    public AudioClip battleMusic;
+    public AudioClip overworldMusic;
+    public AudioClip victoryMusic;
+
+    public void MuteMusic()
     {
-        
+        audioSource.Stop();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void PlayMusic(AudioClip clip)
     {
-        if (battleSystem.inBattle && !battleMusic.isPlaying)
-        {
-            battleMusic.Play();
-        }
-        else if (!battleSystem.inBattle)
-        {
-            battleMusic.Stop();
-        }
+        MuteMusic();
+        audioSource.clip = clip;
+        audioSource.Play();
+    }
+
+    public void PlayOverworldMusic()
+    {
+        audioSource.loop = true;
+        PlayMusic(overworldMusic);
+    }
+
+    public void PlayBattleMusic()
+    {
+        audioSource.loop = true;
+        PlayMusic(battleMusic);
+    }
+
+    public void PlayVictoryMusic()
+    {
+        StartCoroutine(BufferedSound());
+    }
+
+    IEnumerator BufferedSound()
+    {
+        audioSource.clip = victoryMusic;
+        audioSource.loop = false;
+        audioSource.Play();
+        yield return new WaitForSeconds(victoryMusic.length);
+        audioSource.clip = overworldMusic;
+        audioSource.loop = true;
+        audioSource.Play();
     }
 }

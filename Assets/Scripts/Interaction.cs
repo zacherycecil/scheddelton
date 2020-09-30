@@ -15,21 +15,17 @@ public class Interaction : MonoBehaviour
 
     // bools
     public bool itemInRange;
+    public bool itemContainerInRange;
     public bool friendlyInRange;
     public bool sidekickInRange;
     public bool doorInRange;
 
     // interactables
     Interactable item;
+    public Interactable itemContainer;
     public Interactable friendly;
     public Interactable sidekick;
     Door door;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
 
     // Update is called once per frame
     void Update()
@@ -52,17 +48,29 @@ public class Interaction : MonoBehaviour
             {
                 item.PickupItem(item.gameObject.GetComponent<Item>());
             }
+            else if (itemContainerInRange && Input.GetKeyDown(interactKey))
+            {
+                itemContainer.GetItemFromContainer(itemContainer.gameObject.GetComponent<ItemContainer>());
+            }
             else if (doorInRange && Input.GetKeyDown(interactKey))
             {
-                if (player.HasKey(door.GetKeyToOpen()))
+                if (door.unlocked)
                 {
-                    door.GetKeyToOpen().Use();
+                    dialog.SystemDialogBuffer(door.doorName + " is unlocked. " + player.characterName + " opens the door.");
                     door.OpenDoor();
-                    dialog.SystemDialogBuffer(door.GetKeyToOpen().actionString);
                 }
                 else
                 {
-                    dialog.SystemDialogBuffer("The door is locked. " + player.characterName + " checks his pockets but he does not have the key.");
+                    if (player.HasKey(door.GetKeyToOpen()))
+                    {
+                        door.GetKeyToOpen().Use();
+                        door.OpenDoor();
+                        dialog.SystemDialogBuffer(door.GetKeyToOpen().actionString);
+                    }
+                    else
+                    {
+                        dialog.SystemDialogBuffer(door.doorName + " is locked. " + player.characterName + " checks his pockets but he does not have the key.");
+                    }
                 }
             }
             else if (friendlyInRange && Input.GetKeyDown(interactKey))
@@ -98,6 +106,11 @@ public class Interaction : MonoBehaviour
             item = collision.gameObject.GetComponent<Interactable>();
             itemInRange = true;
         }
+        else if (collision.gameObject.CompareTag("Item Container"))
+        {
+            itemContainer = collision.gameObject.GetComponent<Interactable>();
+            itemContainerInRange = true;
+        }
         else if (collision.gameObject.CompareTag("Door"))
         {
             door = collision.gameObject.GetComponent<Door>();
@@ -129,6 +142,10 @@ public class Interaction : MonoBehaviour
         if (collision.gameObject.CompareTag("Item"))
         {
             itemInRange = false;
+        }
+        else if (collision.gameObject.CompareTag("Item Container"))
+        {
+            itemContainerInRange = false;
         }
         else if (collision.gameObject.CompareTag("Friendly"))
         {

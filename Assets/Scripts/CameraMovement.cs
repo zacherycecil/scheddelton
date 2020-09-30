@@ -14,6 +14,7 @@ public class CameraMovement : MonoBehaviour
     public BattleSystem battleSystem;
     public Interaction interaction;
     public DialogSystem dialog;
+    public WorldArea currentArea;
 
     // Start is called before the first frame update
     void Start()
@@ -52,5 +53,18 @@ public class CameraMovement : MonoBehaviour
                 transform.position = Vector3.Lerp(transform.position, targetPosition, smoothing);
             }
         }
+    }
+
+    public void SetCameraPosition(Vector2 pos)
+    {
+        pos.x = Mathf.Clamp(pos.x, minPosition.x, maxPosition.x);
+        pos.y = Mathf.Clamp(pos.y, minPosition.y, maxPosition.y);
+        transform.position = new Vector3(pos.x, pos.y, transform.position.z);
+    }
+
+    public void SetCameraMinMax(Vector2 max, Vector2 min)
+    {
+        maxPosition = max;
+        minPosition = min;
     }
 }

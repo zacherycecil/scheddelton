@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 
-public class Interactable : Character
+public class Interactable : MonoBehaviour
 {
     [System.Serializable]
     public struct DialogObject
@@ -46,5 +46,20 @@ public class Interactable : Character
         player.AddItem(item);
         menuSystem.LoadItemButtons(player.items);
         item.gameObject.SetActive(false);
+    }
+
+    public void GetItemFromContainer(ItemContainer itemContainer)
+    {
+        if (!itemContainer.itemReceived)
+        {
+            dialog.SystemDialogBuffer(player.characterName + " has picked up a " + itemContainer.item.itemName + " from the " + itemContainer.containerName + ".");
+            player.AddItem(itemContainer.item);
+            menuSystem.LoadItemButtons(player.items);
+            itemContainer.itemReceived = true; 
+        }
+        else
+        {
+            dialog.SystemDialogBuffer(player.characterName + " checks the " + itemContainer.containerName + " but it's empty.");
+        }
     }
 }

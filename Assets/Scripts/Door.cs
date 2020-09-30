@@ -1,12 +1,15 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Door : Interactable
 {
+    public String doorName;
     public Sprite doorClosed;
     public Sprite doorOpened;
     public DoorKey key;
+    public bool unlocked;
 
     public void OpenDoor()
     {

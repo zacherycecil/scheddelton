@@ -92,6 +92,135 @@ TextureImporter:
   - first:
       213: -7531843090614007416
     second: brick-wall-pe_15
+  - first:
+      213: 2340248385383194095
+    second: brick-wall-pe_14
+  - first:
+      213: 7455503671956707819
+    second: brick-wall-pe_15
+  - first:
+      213: 5135894253535710184
+    second: brick-wall-pe_16
+  - first:
+      213: -5535341239587267821
+    second: brick-wall-pe_17
+  - first:
+      213: 952979688722039114
+    second: brick-wall-pe_16
+  - first:
+      213: -5648339980550774922
+    second: brick-wall-pe_17
+  - first:
+      213: -3944655200255270238
+    second: brick-wall-pe_18
+  - first:
+      213: -5563008123115430283
+    second: brick-wall-pe_18
+  - first:
+      213: -6606178529145888002
+    second: brick-wall-pe_19
+  - first:
+      213: -7855118364100224209
+    second: brick-wall-pe_20
+  - first:
+      213: -3310530272878012435
+    second: brick-wall-pe_19
+  - first:
+      213: -4705863884585333887
+    second: brick-wall-pe_20
+  - first:
+      213: 3033083987963304266
+    second: brick-wall-pe_21
+  - first:
+      213: -357508533432513525
+    second: brick-wall-pe_22
+  - first:
+      213: -2036530748285021583
+    second: brick-wall-pe_21
+  - first:
+      213: 3109297613821578255
+    second: brick-wall-pe_22
+  - first:
+      213: -8902667617837203153
+    second: brick-wall-pe_23
+  - first:
+      213: 7328535695296566158
+    second: brick-wall-pe_24
+  - first:
+      213: 2810860779568264224
+    second: brick-wall-pe_23
+  - first:
+      213: -772572412699956744
+    second: brick-wall-pe_24
+  - first:
+      213: 1331576488860184950
+    second: brick-wall-pe_25
+  - first:
+      213: -4081801455486996169
+    second: brick-wall-pe_26
+  - first:
+      213: 3683478335451885193
+    second: brick-wall-pe_27
+  - first:
+      213: 4790413416425942479
+    second: brick-wall-pe_28
+  - first:
+      213: -6665248501912451963
+    second: brick-wall-pe_29
+  - first:
+      213: -8632809164673873200
+    second: brick-wall-pe_30
+  - first:
+      213: -8710816824135518805
+    second: brick-wall-pe_31
+  - first:
+      213: 5239991855595911677
+    second: brick-wall-pe_32
+  - first:
+      213: 6786069909851617442
+    second: brick-wall-pe_33
+  - first:
+      213: 1878006135953069609
+    second: brick-wall-pe_34
+  - first:
+      213: -3215594685042023820
+    second: brick-wall-pe_35
+  - first:
+      213: 8181609908254241414
+    second: brick-wall-pe_36
+  - first:
+      213: -4802062424554770829
+    second: brick-wall-pe_37
+  - first:
+      213: -7216327066964671933
+    second: brick-wall-pe_38
+  - first:
+      213: -5169088676972797086
+    second: brick-wall-pe_39
+  - first:
+      213: -6960005062147347417
+    second: brick-wall-pe_40
+  - first:
+      213: -9037869588088472472
+    second: brick-wall-pe_41
+  - first:
+      213: -2948885504729197250
+    second: brick-wall-pe_42
+  - first:
+      213: -8537824567313031147
+    second: brick-wall-pe_43
+  - first:
+      213: -3695998103748552071
+    second: brick-wall-pe_44
+  - first:
+      213: 2480161825471370082
+    second: brick-wall-pe_45
+  - first:
+      213: 5329591913416846532
+    second: brick-wall-pe_46
+  - first:
+      213: -7089632839817594179
+    second: brick-wall-pe_47
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -297,8 +426,8 @@ TextureImporter:
       name: brick-wall-pe_5
       rect:
         serializedVersion: 2
-        x: 0
-        y: 128
+        x: 160
+        y: 160
         width: 32
         height: 32
       alignment: 0
@@ -318,8 +447,8 @@ TextureImporter:
       name: brick-wall-pe_6
       rect:
         serializedVersion: 2
-        x: 64
-        y: 128
+        x: 192
+        y: 160
         width: 32
         height: 32
       alignment: 0
@@ -339,8 +468,8 @@ TextureImporter:
       name: brick-wall-pe_7
       rect:
         serializedVersion: 2
-        x: 96
-        y: 128
+        x: 224
+        y: 160
         width: 32
         height: 32
       alignment: 0
@@ -360,7 +489,7 @@ TextureImporter:
       name: brick-wall-pe_8
       rect:
         serializedVersion: 2
-        x: 128
+        x: 0
         y: 128
         width: 32
         height: 32
@@ -381,8 +510,8 @@ TextureImporter:
       name: brick-wall-pe_9
       rect:
         serializedVersion: 2
-        x: 0
-        y: 96
+        x: 32
+        y: 128
         width: 32
         height: 32
       alignment: 0
@@ -402,8 +531,8 @@ TextureImporter:
       name: brick-wall-pe_10
       rect:
         serializedVersion: 2
-        x: 32
-        y: 96
+        x: 64
+        y: 128
         width: 32
         height: 32
       alignment: 0
@@ -423,8 +552,8 @@ TextureImporter:
       name: brick-wall-pe_11
       rect:
         serializedVersion: 2
-        x: 64
-        y: 96
+        x: 96
+        y: 128
         width: 32
         height: 32
       alignment: 0
@@ -444,8 +573,8 @@ TextureImporter:
       name: brick-wall-pe_12
       rect:
         serializedVersion: 2
-        x: 96
-        y: 96
+        x: 128
+        y: 128
         width: 32
         height: 32
       alignment: 0
@@ -465,8 +594,8 @@ TextureImporter:
       name: brick-wall-pe_13
       rect:
         serializedVersion: 2
-        x: 128
-        y: 96
+        x: 160
+        y: 128
         width: 32
         height: 32
       alignment: 0
@@ -486,6 +615,384 @@ TextureImporter:
       name: brick-wall-pe_14
       rect:
         serializedVersion: 2
+        x: 192
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fed52f0e18b3a7020800000000000000
+      internalID: 2340248385383194095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-wall-pe_15
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be99994b615477760800000000000000
+      internalID: 7455503671956707819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-wall-pe_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4180705af9a93d00800000000000000
+      internalID: 952979688722039114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-wall-pe_17
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67f52a0c6b01d91b0800000000000000
+      internalID: -5648339980550774922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-wall-pe_18
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57e971b06993cc2b0800000000000000
+      internalID: -5563008123115430283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-wall-pe_19
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de7ddeab142ae02d0800000000000000
+      internalID: -3310530272878012435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-wall-pe_20
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18b83fdcab961beb0800000000000000
+      internalID: -4705863884585333887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-wall-pe_21
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1729f4e031accb3e0800000000000000
+      internalID: -2036530748285021583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-wall-pe_22
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0c0eccb4b1762b20800000000000000
+      internalID: 3109297613821578255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-wall-pe_23
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0247e378cfe220720800000000000000
+      internalID: 2810860779568264224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-wall-pe_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f9a0c1eb754745f0800000000000000
+      internalID: -772572412699956744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-wall-pe_25
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 671f5c9f2c5ba7210800000000000000
+      internalID: 1331576488860184950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-wall-pe_26
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 731760ad3378a57c0800000000000000
+      internalID: -4081801455486996169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-wall-pe_27
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98ee47ab7085e1330800000000000000
+      internalID: 3683478335451885193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-wall-pe_28
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcd655d1f97fa7240800000000000000
+      internalID: 4790413416425942479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-wall-pe_29
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 584cdcf2dc74083a0800000000000000
+      internalID: -6665248501912451963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-wall-pe_30
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0da80e5adc9123880800000000000000
+      internalID: -8632809164673873200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-wall-pe_31
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba5f7e51046fc1780800000000000000
+      internalID: -8710816824135518805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-wall-pe_32
+      rect:
+        serializedVersion: 2
         x: 0
         y: 32
         width: 32
@@ -497,14 +1004,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 511ffff575383bc80800000000000000
-      internalID: -8308152476272430827
+      spriteID: df9fbba74d038b840800000000000000
+      internalID: 5239991855595911677
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: brick-wall-pe_15
+      name: brick-wall-pe_33
       rect:
         serializedVersion: 2
         x: 32
@@ -518,8 +1025,302 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 889c8ff4d94897790800000000000000
-      internalID: -7531843090614007416
+      spriteID: 2a83cadf0a6fc2e50800000000000000
+      internalID: 6786069909851617442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-wall-pe_34
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9269c7b61a4001a10800000000000000
+      internalID: 1878006135953069609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-wall-pe_35
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 472af60cba9ef53d0800000000000000
+      internalID: -3215594685042023820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-wall-pe_36
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6827f401ddaea8170800000000000000
+      internalID: 8181609908254241414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-wall-pe_37
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37e6923daa5ab5db0800000000000000
+      internalID: -4802062424554770829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-wall-pe_38
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 342c88e24c47adb90800000000000000
+      internalID: -7216327066964671933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-wall-pe_39
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 263ea8c3c35b348b0800000000000000
+      internalID: -5169088676972797086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-wall-pe_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72c69cb8548196f90800000000000000
+      internalID: -6960005062147347417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-wall-pe_41
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86c3eab8e79039280800000000000000
+      internalID: -9037869588088472472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-wall-pe_42
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e35515fd1447317d0800000000000000
+      internalID: -2948885504729197250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-wall-pe_43
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51024b69acd838980800000000000000
+      internalID: -8537824567313031147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-wall-pe_44
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97adc8f8e4d25bcc0800000000000000
+      internalID: -3695998103748552071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-wall-pe_45
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26394b03a0e4b6220800000000000000
+      internalID: 2480161825471370082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-wall-pe_46
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cc610d9b9386f940800000000000000
+      internalID: 5329591913416846532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-wall-pe_47
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dba7ab2ae709c9d90800000000000000
+      internalID: -7089632839817594179
       vertices: []
       indices: 
       edges: []

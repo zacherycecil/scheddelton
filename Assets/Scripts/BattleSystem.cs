@@ -18,16 +18,18 @@ public class BattleSystem : MonoBehaviour
 
     // CHARACTERS
     public Player player;
-    Enemy enemy;
+    public Enemy enemy;
 
     // OTHER FIGHT ELEMENTS
     public Animator fightText;
-    public AudioSource gong;
-    public AudioSource punch;
     public BattleState state;
     public bool inBattle;
+
+    // EVENTS
     public UnityEvent showLevelUpMenu;
     public UnityEvent enemyDie;
+    public UnityEvent startBattle;
+    public UnityEvent notInBattle;
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +40,7 @@ public class BattleSystem : MonoBehaviour
         menuSystem.LoadSidekickButtons(player.sidekicks);
         menuSystem.LoadItemButtons(player.items);
         dialog.CloseDialogBox();
+        notInBattle.Invoke();
     }
 
     // Update is called once per frame
@@ -66,6 +69,9 @@ public class BattleSystem : MonoBehaviour
 
             // enemy camera set
             dialog.currentDialogTarget = enemy.gameObject;
+
+            // start (battle music)
+            startBattle.Invoke();
 
             // enter battle dialog
             dialog.ResetDialogString();

@@ -10,6 +10,7 @@ TagManager:
   - Sidekick
   - Item
   - Door
+  - Item Container
   layers:
   - Default
   - TransparentFX
