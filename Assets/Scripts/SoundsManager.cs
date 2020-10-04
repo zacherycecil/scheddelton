@@ -37,7 +37,8 @@ public class SoundsManager : MonoBehaviour
 
     public void PlayVictoryMusic()
     {
-        StartCoroutine(BufferedSound());
+        if(audioSource.clip != victoryMusic)
+            StartCoroutine(BufferedSound());
     }
 
     IEnumerator BufferedSound()

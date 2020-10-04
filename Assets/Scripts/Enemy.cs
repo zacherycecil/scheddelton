@@ -26,14 +26,14 @@ public class Enemy : Character
 
     public void CheckDistance()
     {
-        if (Vector3.Distance(target.position, transform.position) <= combatBeginRadius && !inBattle)
+        if (Vector3.Distance(target.position, transform.position) <= combatBeginRadius && !inBattle && !player.GetMovementLocked())
         {
             bs.SetEnemy(this);
             bs.state = BattleState.START;
             inBattle = true;
             moving = false;
         }
-        else if (Vector3.Distance(target.position, transform.position) <= chaseRadius && !inBattle)
+        else if (Vector3.Distance(target.position, transform.position) <= chaseRadius && !inBattle && !player.GetMovementLocked())
         {
             moving = true;
             if(!bs.inBattle && !player.isInMenu && !player.isInDialog)

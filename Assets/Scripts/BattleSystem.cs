@@ -26,6 +26,7 @@ public class BattleSystem : MonoBehaviour
     public bool inBattle;
 
     // EVENTS
+    public UnityEvent enableButtons;
     public UnityEvent showLevelUpMenu;
     public UnityEvent enemyDie;
     public UnityEvent startBattle;
@@ -56,10 +57,6 @@ public class BattleSystem : MonoBehaviour
             }
         }
         // BATTLE LOGIC
-        if(player.isInDialog)
-            menuSystem.ButtonsEnabled(false);
-        else
-            menuSystem.ButtonsEnabled(true);
 
         // STATE START
         if (state == BattleState.START)
@@ -89,6 +86,7 @@ public class BattleSystem : MonoBehaviour
             //gong.Play();
 
             state = BattleState.WAITING;
+            menuSystem.ButtonsEnabled(true);
             inBattle = true;
         }
         // STATE ENEMY TURN
@@ -114,7 +112,7 @@ public class BattleSystem : MonoBehaviour
         // STATE PLAYER TURN
         else if (state == BattleState.PLAYER_TURN)
         {
-            menuSystem.ButtonsEnabled(true);
+            dialog.SpecialDialogBuffer("Scheddelton is deciding what to do...", 0, enableButtons);
             state = BattleState.WAITING;
         }
         else if (state == BattleState.WON)
@@ -254,7 +252,10 @@ public class BattleSystem : MonoBehaviour
             menuSystem.ButtonsEnabled(false);
         }
         else
+        {
             dialog.BattleDialogBuffer(attackDialog + attack.attackName + " deals " + (int)damage + " damage to " + enemy.characterName + ".");
+            dialog.SpecialDialogBuffer(attackDialog + attack.attackName + " deals " + (int)damage + " damage to " + enemy.characterName + ".", enableButtons);
+        }
         // WEAPON EXP
         if (player.currentWeapon.level.IncreaseExperience((int)damage))
         {

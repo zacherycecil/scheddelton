@@ -44,7 +44,7 @@ public class Stamina : MonoBehaviour
         }
         if(currentStamina == 0)
         {
-            StartCoroutine(BlinkFinishButton());
+            finishButton.GetComponentInChildren<ButtonBehaviour>().ButtonColorGreen();
         }
         return enoughStamina;
     }

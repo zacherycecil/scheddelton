@@ -10,15 +10,32 @@ public class Door : Interactable
     public Sprite doorOpened;
     public DoorKey key;
     public bool unlocked;
+    public bool vertical;
 
     public void OpenDoor()
     {
-        this.gameObject.GetComponent<SpriteRenderer>().sprite = doorOpened;
-        this.gameObject.GetComponent<BoxCollider2D>().enabled = false;
-
-        foreach (Transform doorCollider in this.gameObject.transform)
+        if (vertical)
+            OpenVerticalDoor();
+        else
         {
-            doorCollider.gameObject.GetComponent<BoxCollider2D>().enabled = true;
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = doorOpened;
+            this.gameObject.GetComponent<Collider2D>().enabled = false;
+
+            foreach (Transform doorCollider in this.gameObject.transform)
+            {
+                doorCollider.gameObject.GetComponent<Collider2D>().enabled = true;
+            }
+        }
+    }
+
+    public void OpenVerticalDoor()
+    {
+        this.gameObject.GetComponent<Collider2D>().enabled = false;
+        this.gameObject.GetComponent<SpriteRenderer>().sprite = null;
+
+        foreach (Transform door in this.gameObject.transform)
+        {
+            door.gameObject.SetActive(true);
         }
     }
 

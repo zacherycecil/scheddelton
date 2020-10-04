@@ -102,6 +102,7 @@ public class MenuSystem : MonoBehaviour
         for (int i = 0; i < mainBattleMenuButtons.Count; i++)
         {
             mainBattleMenuButtons[i].interactable = enableButtons;
+            mainBattleMenuButtons[i].GetComponentInChildren<ButtonBehaviour>().TextToMatchPressedButton(!enableButtons);
         }
     }
 

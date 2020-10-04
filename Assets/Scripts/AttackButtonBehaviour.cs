@@ -22,6 +22,7 @@ public class AttackButtonBehaviour : ButtonBehaviour, IPointerEnterHandler, IPoi
     {
         if (stamina.UseStamina(attack.staminaNeeded))
         {
+            menuSystem.ButtonsEnabled(false);
             battleSystem.PlayerDoAttack(attack);
             menuSystem.GoToMainBattleMenu();
         }
