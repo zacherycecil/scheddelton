@@ -99,8 +99,8 @@ public class Player : Character
         bool leveledUp = level.IncreaseExperience(exp);
         if(leveledUp)
         {
-            currentHealth += level.currentLevel * 3;
-            maxHealth += level.currentLevel * 3;
+            currentHealth = (int)(currentHealth * 1.3);
+            maxHealth = (int)(maxHealth * 1.3);
         }
         return leveledUp;
     }

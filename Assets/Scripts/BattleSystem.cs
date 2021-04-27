@@ -234,9 +234,9 @@ public class BattleSystem : MonoBehaviour
         }
         // ELEMENTAL / PHYSICAL
         if (attack.elemental)
-            damage = damage * (1 + (player.elementalControlLevel * 0.10f));
+            damage = damage * (1 + (player.elementalControlLevel * 0.30f));
         if (attack.physical)
-            damage = damage * (1 + (player.physicalStrengthLevel * 0.10f));
+            damage = damage * (1 + (player.physicalStrengthLevel * 0.30f));
         // WEAPON LEVEL MULTIPLIER
         damage = damage * player.currentWeapon.GetDamageMultiplier();
         // ANIMATION

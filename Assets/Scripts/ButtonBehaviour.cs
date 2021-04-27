@@ -40,7 +40,7 @@ public class ButtonBehaviour : MonoBehaviour, IPointerDownHandler, IPointerUpHan
 
     public void GetPlayerStats()
     {
-        dialog.DisplaySystemDialog(player.characterName + "\nLevel: " + player.GetLevel() + ", " + player.PercentToNextLevel() + "% to next level.");
+        dialog.DisplaySystemDialog(player.characterName + " (" + player.currentHealth + "/" + player.maxHealth + ")\nLevel: " + player.GetLevel() + ", " + player.PercentToNextLevel() + "% to next level.");
         dialog.DisplaySystemDialog("Physical Strength: " + player.physicalStrengthLevel);
         dialog.DisplaySystemDialog("Cunning: " + player.cunningLevel);
         dialog.DisplaySystemDialog("Elemental Control: " + player.elementalControlLevel);
